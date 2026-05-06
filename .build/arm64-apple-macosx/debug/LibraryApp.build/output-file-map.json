@@ -1,0 +1,411 @@
+{
+  "": {
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/master.swiftdeps"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/AppRouter.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AppRouter.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AppRouter.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AppRouter~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AppRouter.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AppRouter.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/LibraryCompanionApp.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryCompanionApp.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryCompanionApp.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryCompanionApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryCompanionApp.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryCompanionApp.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/AppLockView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AppLockView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AppLockView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AppLockView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AppLockView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AppLockView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/AuthEntryView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AuthEntryView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AuthEntryView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AuthEntryView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AuthEntryView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AuthEntryView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignInView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignInView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignInView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignInView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignInView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInViewModel.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignInViewModel.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignInViewModel.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignInViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignInViewModel.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignInViewModel.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignUpView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignUpView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignUpView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignUpView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignUpView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpViewModel.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignUpViewModel.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignUpViewModel.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignUpViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignUpViewModel.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SignUpViewModel.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SplashView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SplashView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SplashView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SplashView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SplashView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SplashView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/BookCoverCard.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookCoverCard.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookCoverCard.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookCoverCard~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookCoverCard.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookCoverCard.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/BookRow.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookRow.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookRow.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookRow~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookRow.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookRow.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/CategoryChip.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/CategoryChip.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/CategoryChip.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/CategoryChip~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/CategoryChip.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/CategoryChip.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/DataScannerView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DataScannerView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DataScannerView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DataScannerView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DataScannerView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DataScannerView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingMinutesChart.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingMinutesChart.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingMinutesChart.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingMinutesChart~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingMinutesChart.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingMinutesChart.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingStatsCard.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingStatsCard.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingStatsCard.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingStatsCard~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingStatsCard.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingStatsCard.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/StatusPill.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/StatusPill.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/StatusPill.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/StatusPill~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/StatusPill.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/StatusPill.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/AddBookView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AddBookView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AddBookView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AddBookView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AddBookView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AddBookView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/BookManagementView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookManagementView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookManagementView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookManagementView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookManagementView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookManagementView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Dashboard/DashboardView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DashboardView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DashboardView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DashboardView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DashboardView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DashboardView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Issues/ReportedIssuesView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReportedIssuesView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReportedIssuesView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReportedIssuesView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReportedIssuesView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReportedIssuesView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/LibrarianTabView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibrarianTabView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibrarianTabView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibrarianTabView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibrarianTabView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibrarianTabView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Members/MemberDetailView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberDetailView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberDetailView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberDetailView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberDetailView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberDetailView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Members/MemberListView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberListView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberListView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberListView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberListView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberListView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/LibraryApp.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryApp.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryApp.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryApp.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryApp.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Books/BookDetailView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookDetailView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookDetailView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookDetailView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookDetailView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookDetailView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Books/PDFKitView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/PDFKitView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/PDFKitView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/PDFKitView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/PDFKitView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/PDFKitView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DiscoverView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DiscoverView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DiscoverView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DiscoverView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DiscoverView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverViewModel.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DiscoverViewModel.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DiscoverViewModel.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DiscoverViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DiscoverViewModel.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DiscoverViewModel.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/BiometricReservationConfirmationView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BiometricReservationConfirmationView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BiometricReservationConfirmationView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BiometricReservationConfirmationView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BiometricReservationConfirmationView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BiometricReservationConfirmationView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallDetailView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HallDetailView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HallDetailView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HallDetailView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HallDetailView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HallDetailView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallsListView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HallsListView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HallsListView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HallsListView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HallsListView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HallsListView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/SeatGridView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SeatGridView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SeatGridView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SeatGridView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SeatGridView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SeatGridView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HomeView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HomeView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HomeView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HomeView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HomeView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeViewModel.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HomeViewModel.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HomeViewModel.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HomeViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HomeViewModel.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/HomeViewModel.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LibraryView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LibraryView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LoansView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LoansView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LoansView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LoansView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LoansView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LoansView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/ReservationsView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReservationsView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReservationsView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReservationsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReservationsView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReservationsView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/MemberTabView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberTabView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberTabView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberTabView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberTabView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MemberTabView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Profile/ProfileView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ProfileView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ProfileView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ProfileView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ProfileView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ProfileView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingHistoryView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingHistoryView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingHistoryView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingHistoryView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingHistoryView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingHistoryView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingProgressView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingProgressView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingProgressView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingProgressView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingProgressView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingProgressView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingTrackerView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingTrackerView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingTrackerView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingTrackerView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingTrackerView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ReadingTrackerView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Rewards/RewardsView.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/RewardsView.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/RewardsView.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/RewardsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/RewardsView.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/RewardsView.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Models/Models.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/Models.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/Models.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/Models.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/Models.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/AuthService.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AuthService.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AuthService.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AuthService~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AuthService.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/AuthService.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/BiometricAuthService.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BiometricAuthService.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BiometricAuthService.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BiometricAuthService~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BiometricAuthService.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BiometricAuthService.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/BookLookupService.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookLookupService.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookLookupService.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookLookupService~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookLookupService.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/BookLookupService.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/FirebaseSyncService.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/FirebaseSyncService.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/FirebaseSyncService.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/FirebaseSyncService~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/FirebaseSyncService.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/FirebaseSyncService.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/MockData.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MockData.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MockData.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MockData~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MockData.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/MockData.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/NetworkService.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/NetworkService.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/NetworkService.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/NetworkService~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/NetworkService.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/NetworkService.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/NotificationService.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/NotificationService.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/NotificationService.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/NotificationService~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/NotificationService.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/NotificationService.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/SpeechRecognizer.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SpeechRecognizer.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SpeechRecognizer.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SpeechRecognizer~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SpeechRecognizer.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SpeechRecognizer.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ThemeColors.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ThemeColors.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ThemeColors.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ThemeColors~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ThemeColors.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/ThemeColors.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/InputFieldStyle.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/InputFieldStyle.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/InputFieldStyle.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/InputFieldStyle~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/InputFieldStyle.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/InputFieldStyle.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/LightCardModifier.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LightCardModifier.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LightCardModifier.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LightCardModifier~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LightCardModifier.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/LightCardModifier.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/PrimaryButtonStyle.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/PrimaryButtonStyle.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/PrimaryButtonStyle.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/PrimaryButtonStyle~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/PrimaryButtonStyle.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/PrimaryButtonStyle.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/SecondaryButtonStyle.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SecondaryButtonStyle.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SecondaryButtonStyle.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SecondaryButtonStyle~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SecondaryButtonStyle.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/SecondaryButtonStyle.dia"
+  },
+  "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/resource_bundle_accessor.d",
+    "object": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-macosx/debug/LibraryApp.build/resource_bundle_accessor.dia"
+  }
+}

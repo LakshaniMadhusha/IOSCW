@@ -1,0 +1,1296 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.LibraryApp-arm64-apple-ios17.0-simulator-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/sources",
+      "importPath" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/AppRouter.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/LibraryCompanionApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/AppLockView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/AuthEntryView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SplashView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/BookCoverCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/BookRow.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/CategoryChip.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/DataScannerView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingMinutesChart.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingStatsCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/StatusPill.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/AddBookView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/BookManagementView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Dashboard/DashboardView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Issues/ReportedIssuesView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/LibrarianTabView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Members/MemberDetailView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Members/MemberListView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/LibraryApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Books/BookDetailView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Books/PDFKitView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/BiometricReservationConfirmationView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallDetailView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallsListView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/SeatGridView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LibraryView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LoansView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/MemberTabView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Profile/ProfileView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingHistoryView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingProgressView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingTrackerView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Rewards/RewardsView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Models/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/AuthService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/BiometricAuthService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/BookLookupService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/FirebaseSyncService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/MockData.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/NetworkService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/NotificationService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/SpeechRecognizer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ThemeColors.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/InputFieldStyle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/LightCardModifier.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/PrimaryButtonStyle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/SecondaryButtonStyle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "LibraryApp",
+      "moduleOutputPath" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/Modules/LibraryApp.swiftmodule",
+      "objects" : [
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AppRouter.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibraryCompanionApp.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AppLockView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AuthEntryView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignInView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignInViewModel.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignUpView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignUpViewModel.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SplashView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookCoverCard.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookRow.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/CategoryChip.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DataScannerView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingMinutesChart.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingStatsCard.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/StatusPill.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AddBookView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookManagementView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DashboardView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReportedIssuesView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibrarianTabView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MemberDetailView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MemberListView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibraryApp.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookDetailView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/PDFKitView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DiscoverView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DiscoverViewModel.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BiometricReservationConfirmationView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HallDetailView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HallsListView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SeatGridView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HomeView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HomeViewModel.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibraryView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LoansView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MemberTabView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ProfileView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingHistoryView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingProgressView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingTrackerView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/RewardsView.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/Models.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AuthService.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BiometricAuthService.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookLookupService.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/FirebaseSyncService.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MockData.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/NetworkService.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/NotificationService.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SpeechRecognizer.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ThemeColors.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/InputFieldStyle.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LightCardModifier.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/PrimaryButtonStyle.swift.o",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SecondaryButtonStyle.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-ios17.0-simulator",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "LibraryApp_main",
+        "-swift-version",
+        "5",
+        "-parse-as-library",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "smartlibrary_main_2"
+      ],
+      "outputFileMapPath" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AppRouter.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibraryCompanionApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AppLockView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AuthEntryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignInView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignInViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignUpView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignUpViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SplashView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookCoverCard.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookRow.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/CategoryChip.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DataScannerView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingMinutesChart.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingStatsCard.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/StatusPill.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AddBookView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookManagementView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DashboardView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReportedIssuesView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibrarianTabView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MemberDetailView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MemberListView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibraryApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookDetailView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/PDFKitView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DiscoverView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DiscoverViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BiometricReservationConfirmationView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HallDetailView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HallsListView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SeatGridView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HomeView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HomeViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibraryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LoansView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MemberTabView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ProfileView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingHistoryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingProgressView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingTrackerView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/RewardsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AuthService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BiometricAuthService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookLookupService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/FirebaseSyncService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MockData.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/NetworkService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/NotificationService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SpeechRecognizer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ThemeColors.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/InputFieldStyle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LightCardModifier.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/PrimaryButtonStyle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SecondaryButtonStyle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/Modules/LibraryApp.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/AppRouter.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/LibraryCompanionApp.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/AppLockView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/AuthEntryView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInViewModel.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpViewModel.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SplashView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/BookCoverCard.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/BookRow.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/CategoryChip.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/DataScannerView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingMinutesChart.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingStatsCard.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/StatusPill.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/AddBookView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/BookManagementView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Dashboard/DashboardView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Issues/ReportedIssuesView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/LibrarianTabView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Members/MemberDetailView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Members/MemberListView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/LibraryApp.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Books/BookDetailView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Books/PDFKitView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverViewModel.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/BiometricReservationConfirmationView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallDetailView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallsListView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/SeatGridView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeViewModel.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LibraryView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LoansView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/MemberTabView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Profile/ProfileView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingHistoryView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingProgressView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingTrackerView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Rewards/RewardsView.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Models/Models.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/AuthService.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/BiometricAuthService.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/BookLookupService.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/FirebaseSyncService.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/MockData.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/NetworkService.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/NotificationService.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/SpeechRecognizer.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ThemeColors.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/InputFieldStyle.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/LightCardModifier.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/PrimaryButtonStyle.swift",
+        "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/SecondaryButtonStyle.swift"
+      ],
+      "tempsPath" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "LibraryApp" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "LibraryApp",
+      "-package-name",
+      "smartlibrary_main_2",
+      "-c",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/AppRouter.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/LibraryCompanionApp.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/AppLockView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/AuthEntryView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInViewModel.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpViewModel.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SplashView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/BookCoverCard.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/BookRow.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/CategoryChip.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/DataScannerView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingMinutesChart.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingStatsCard.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/StatusPill.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/AddBookView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/BookManagementView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Dashboard/DashboardView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Issues/ReportedIssuesView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/LibrarianTabView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Members/MemberDetailView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Members/MemberListView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/LibraryApp.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Books/BookDetailView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Books/PDFKitView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverViewModel.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/BiometricReservationConfirmationView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallDetailView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallsListView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/SeatGridView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeViewModel.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LibraryView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LoansView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/MemberTabView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Profile/ProfileView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingHistoryView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingProgressView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingTrackerView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Rewards/RewardsView.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Models/Models.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/AuthService.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/BiometricAuthService.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/BookLookupService.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/FirebaseSyncService.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/MockData.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/NetworkService.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/NotificationService.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/SpeechRecognizer.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ThemeColors.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/InputFieldStyle.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/LightCardModifier.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/PrimaryButtonStyle.swift",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/SecondaryButtonStyle.swift",
+      "-I",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/Modules",
+      "-target",
+      "arm64-apple-ios17.0-simulator",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "LibraryApp_main",
+      "-swift-version",
+      "5",
+      "-parse-as-library",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "smartlibrary_main_2",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "LibraryApp" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/AppRouter.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/LibraryCompanionApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/AppLockView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/AuthEntryView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SplashView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/BookCoverCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/BookRow.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/CategoryChip.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/DataScannerView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingMinutesChart.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingStatsCard.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/StatusPill.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/AddBookView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/BookManagementView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Dashboard/DashboardView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Issues/ReportedIssuesView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/LibrarianTabView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Members/MemberDetailView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Members/MemberListView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/LibraryApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Books/BookDetailView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Books/PDFKitView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/BiometricReservationConfirmationView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallDetailView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallsListView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/SeatGridView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeViewModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LibraryView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LoansView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/MemberTabView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Profile/ProfileView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingHistoryView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingProgressView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Reading/ReadingTrackerView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Rewards/RewardsView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Models/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/AuthService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/BiometricAuthService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/BookLookupService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/FirebaseSyncService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/MockData.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/NetworkService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/NotificationService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/SpeechRecognizer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ThemeColors.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/InputFieldStyle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/LightCardModifier.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/PrimaryButtonStyle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/SecondaryButtonStyle.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/sources"
+    },
+    "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AddBookView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AppLockView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AppRouter.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AuthEntryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/AuthService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BiometricAuthService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BiometricReservationConfirmationView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookCoverCard.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookDetailView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookLookupService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookManagementView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/BookRow.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/CategoryChip.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DashboardView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DataScannerView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DiscoverView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/DiscoverViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/FirebaseSyncService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HallDetailView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HallsListView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HomeView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/HomeViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/InputFieldStyle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibrarianTabView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibraryApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibraryCompanionApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LibraryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LightCardModifier.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/LoansView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MemberDetailView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MemberListView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MemberTabView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/MockData.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/NetworkService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/NotificationService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/PDFKitView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/PrimaryButtonStyle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ProfileView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingHistoryView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingMinutesChart.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingProgressView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingStatsCard.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReadingTrackerView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ReportedIssuesView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/RewardsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SeatGridView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SecondaryButtonStyle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignInView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignInViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignUpView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SignUpViewModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SpeechRecognizer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/SplashView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/StatusPill.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.build/ThemeColors.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/LibraryApp.product/Objects.LinkFileList"
+    },
+    "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/.build/arm64-apple-ios-simulator/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

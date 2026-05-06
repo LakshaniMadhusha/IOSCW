@@ -1,0 +1,44 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project LibraryApp.xcodeproj -scheme LibraryApp -destination "platform=iOS Simulator,name=iPhone 15 Pro" build
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  gRPC: https://github.com/google/grpc-binary.git @ 1.69.1
+  GoogleAdsOnDeviceConversion: https://github.com/googleads/google-ads-on-device-conversion-ios-sdk @ 2.3.0
+  InteropForGoogle: https://github.com/google/interop-ios-for-google-sdks.git @ 101.0.0
+  leveldb: https://github.com/firebase/leveldb.git @ 1.22.5
+  abseil: https://github.com/google/abseil-cpp-binary.git @ 1.2024072200.0
+  nanopb: https://github.com/firebase/nanopb.git @ 2.30910.0
+  Firebase: https://github.com/firebase/firebase-ios-sdk @ 11.15.0
+  Promises: https://github.com/google/promises.git @ 2.4.0
+  AppCheck: https://github.com/google/app-check.git @ 11.2.0
+  GoogleDataTransport: https://github.com/google/GoogleDataTransport.git @ 10.1.0
+  SwiftProtobuf: https://github.com/apple/swift-protobuf.git @ 1.37.0
+  GoogleAppMeasurement: https://github.com/google/GoogleAppMeasurement.git @ 11.15.0
+  GoogleUtilities: https://github.com/google/GoogleUtilities.git @ 8.1.0
+  GTMSessionFetcher: https://github.com/google/gtm-session-fetcher.git @ 4.5.0
+
+2026-05-04 10:47:10.965 xcodebuild[88723:60461135] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-05-04 10:48:11.133 xcodebuild[88723:60461135] Writing error result bundle to /var/folders/l8/08g5d4d50yn7y5_v6fs1tc8r0000gv/T/ResultBundle_2026-04-05_10-48-0011.xcresult
+xcodebuild: error: Unable to find a device matching the provided destination specifier:
+		{ platform:iOS Simulator, OS:latest, name:iPhone 15 Pro }
+
+	The requested device could not be found because no available devices matched the request.
+
+	Available destinations for the "LibraryApp" scheme:
+		{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00008122-0016519A0081401C, name:My Mac }
+		{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+		{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+		{ platform:iOS Simulator, arch:arm64, id:84AB4EA0-946A-4DC3-970D-47F769EBA879, OS:26.2, name:iPad (A16) }
+		{ platform:iOS Simulator, arch:arm64, id:15DDB5A9-A216-4B79-944B-0522DF551CFB, OS:26.2, name:iPad Air 11-inch (M3) }
+		{ platform:iOS Simulator, arch:arm64, id:6E86921F-B46C-4737-88EC-C2961C357CD8, OS:26.2, name:iPad Air 13-inch (M3) }
+		{ platform:iOS Simulator, arch:arm64, id:DF554597-F775-447A-8D9C-F723AFFA7F55, OS:26.2, name:iPad Pro 11-inch (M5) }
+		{ platform:iOS Simulator, arch:arm64, id:C9E4D7CA-9897-488C-8BF9-B5E0D17211E6, OS:26.2, name:iPad Pro 13-inch (M5) }
+		{ platform:iOS Simulator, arch:arm64, id:DDA4FC6F-F1D5-4B9F-899B-F1F2123E0B03, OS:26.2, name:iPad mini (A17 Pro) }
+		{ platform:iOS Simulator, arch:arm64, id:3F3EB372-3AB7-4F4B-8E38-6D42A1E2E7F1, OS:26.2, name:iPhone 16e }
+		{ platform:iOS Simulator, arch:arm64, id:A2D18B24-C205-43EE-B8A5-67E15E2BABA1, OS:26.2, name:iPhone 17 }
+		{ platform:iOS Simulator, arch:arm64, id:A2287338-D35A-46E8-98F7-1F757C31499F, OS:26.2, name:iPhone 17 Pro }
+		{ platform:iOS Simulator, arch:arm64, id:4E265C66-79F5-4E64-AF1C-D3367243B52E, OS:26.2, name:iPhone 17 Pro Max }
+		{ platform:iOS Simulator, arch:arm64, id:07AD0EF0-9517-4EF3-BD83-951A13E545D4, OS:26.2, name:iPhone Air }

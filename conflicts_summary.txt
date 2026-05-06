@@ -1,0 +1,1611 @@
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/AppRouter.swift ---
+<<<<<<< HEAD
+    
+    @State private var showSplash: Bool = true
+
+    var body: some View {
+        Group {
+            if showSplash {
+                SplashView()
+                    .task {
+                        auth.bootstrap(modelContext: modelContext)
+                        // Give the splash screen animation time to play out
+                        try? await Task.sleep(for: .seconds(2.5))
+                        withAnimation(.easeInOut(duration: 0.5)) {
+                            showSplash = false
+                        }
+                    }
+            } else {
+                switch auth.state {
+                case .signedOut:
+                    AuthEntryView()
+                        .transition(.opacity)
+                case .signedIn(let user):
+                    if auth.isAppLocked {
+                        AppLockView()
+                    } else {
+                        if user.role == .member {
+                            MemberTabView(user: user)
+                        } else {
+                            LibrarianTabView(user: user)
+                        }
+=======
+
+    var body: some View {
+        Group {
+            switch auth.state {
+            case .signedOut:
+                SplashView()
+                    .task { auth.bootstrap(modelContext: modelContext) }
+                    .overlay(alignment: .bottom) {
+                        AuthEntryView()
+                    }
+            case .signedIn(let user):
+                if auth.isAppLocked {
+                    AppLockView()
+                } else {
+                    if user.role == .member {
+                        MemberTabView(user: user)
+                    } else {
+                        LibrarianTabView(user: user)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/App/LibraryCompanionApp.swift ---
+<<<<<<< HEAD
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
+=======
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+=======
+            // If container creation fails, try to delete the store and recreate
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+    init() {
+        FirebaseApp.configure()
+    }
+
+=======
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+                .task {
+                    // Activate Global Dual Offline-Cloud Synchronization Daemon
+                    FirebaseSyncService.shared.startSyncing(context: container.mainContext)
+                }
+=======
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInView.swift ---
+<<<<<<< HEAD
+    var onGoToSignUp: () -> Void
+
+    var body: some View {
+        VStack(spacing: 0) {
+            // Role Tabs
+            HStack(spacing: 0) {
+                RoleTabButton(title: "Member Login", isSelected: vm.selectedRole == .member) {
+                    withAnimation { vm.selectedRole = .member }
+                }
+                RoleTabButton(title: "Librarian Login", isSelected: vm.selectedRole == .librarian) {
+                    withAnimation { vm.selectedRole = .librarian }
+                }
+            }
+            .padding(.bottom, 24)
+
+            VStack(spacing: 16) {
+                VStack(spacing: 12) {
+                    TextField("Email Address", text: $vm.email)
+                        .textInputAutocapitalization(.never)
+                        .keyboardType(.emailAddress)
+                        .inputStyle()
+                    
+                    SecureField("Password", text: $vm.password)
+                        .inputStyle()
+                }
+
+                if let msg = auth.errorMessage ?? vm.errorMessage {
+                    Text(msg)
+                        .font(.caption)
+                        .foregroundColor(.coral)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+
+                Button {
+                    Task { await vm.submit(auth: auth, modelContext: modelContext) }
+                } label: {
+                    if auth.isLoading || vm.isSubmitting {
+                        ProgressView().tint(.white)
+                    } else {
+                        Text("Sign In Securely")
+                    }
+                }
+                .buttonStyle(.primaryButton)
+                .padding(.top, 4)
+
+                Button("Create a new account", action: onGoToSignUp)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundColor(.accent)
+                    .buttonStyle(.plain)
+                    .padding(.top, 8)
+            }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 20)
+        }
+        .padding(.top, 10)
+        .lightCard()
+        .padding(.horizontal, 20)
+    }
+}
+
+struct RoleTabButton: View {
+    let title: String
+    let isSelected: Bool
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            VStack(spacing: 8) {
+                Text(title)
+                    .font(.subheadline.weight(isSelected ? .bold : .medium))
+                    .foregroundColor(isSelected ? .accent : .textSecondary)
+                
+                Rectangle()
+                    .fill(isSelected ? Color.accent : Color.clear)
+                    .frame(height: 3)
+                    .cornerRadius(1.5)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .buttonStyle(.plain)
+=======
+    @State private var isBiometricAvailable = false
+    var onGoToSignUp: () -> Void
+
+    private let biometric = BiometricAuthService()
+
+    var body: some View {
+        VStack(spacing: 16) {
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Sign in")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.textPrimary)
+                Text("Choose a role and continue")
+                    .font(.subheadline)
+                    .foregroundColor(.textSecondary)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+
+            VStack(spacing: 12) {
+                TextField("Email", text: $vm.email)
+                    .textInputAutocapitalization(.never)
+                    .keyboardType(.emailAddress)
+                    .inputStyle()
+
+                Picker("Role", selection: $vm.selectedRole) {
+                    ForEach(UserRole.allCases, id: \.self) { role in
+                        Text(role.rawValue).tag(role)
+                    }
+                }
+                .pickerStyle(.segmented)
+            }
+
+            if isBiometricAvailable {
+                Button {
+                    Task { await biometricSignIn() }
+                } label: {
+                    HStack {
+                        Image(systemName: "faceid")
+                        Text("Sign in with Biometric")
+                    }
+                }
+                .buttonStyle(.secondaryButton)
+            }
+
+            if let msg = auth.errorMessage ?? vm.errorMessage {
+                Text(msg)
+                    .font(.caption)
+                    .foregroundColor(.coral)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+
+            Button {
+                Task { await vm.submit(auth: auth, modelContext: modelContext) }
+            } label: {
+                if auth.isLoading || vm.isSubmitting {
+                    ProgressView().tint(.white)
+                } else {
+                    Text("Continue")
+                }
+            }
+            .buttonStyle(.primaryButton)
+
+            Button("Create an account", action: onGoToSignUp)
+                .font(.subheadline.weight(.semibold))
+                .foregroundColor(.primary)
+                .buttonStyle(.plain)
+        }
+        .padding(20)
+        .lightCard()
+        .padding(.horizontal, 20)
+        .onAppear {
+            let context = LAContext()
+            var error: NSError?
+            isBiometricAvailable = context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error)
+        }
+    }
+
+    @MainActor
+    private func biometricSignIn() async {
+        do {
+            try await biometric.authenticate(reason: "Sign in to Library Companion")
+            // Find user with biometric enabled
+            let predicate = #Predicate<AppUser> { $0.isBiometricEnabled }
+            let descriptor = FetchDescriptor<AppUser>(predicate: predicate)
+            if let user = try modelContext.fetch(descriptor).first {
+                auth.signIn(user: user)
+            } else {
+                vm.errorMessage = "No user with biometric authentication enabled found."
+            }
+        } catch {
+            vm.errorMessage = error.localizedDescription
+        }
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignInViewModel.swift ---
+<<<<<<< HEAD
+    var password: String = "password123"
+=======
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+        await auth.signIn(
+            email: email.trimmingCharacters(in: .whitespacesAndNewlines),
+            password: password.trimmingCharacters(in: .whitespacesAndNewlines),
+            role: selectedRole, 
+            modelContext: modelContext
+        )
+=======
+        await auth.signIn(email: email.trimmingCharacters(in: .whitespacesAndNewlines), role: selectedRole, modelContext: modelContext)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpView.swift ---
+<<<<<<< HEAD
+        VStack(spacing: 0) {
+            // Role Tabs
+            HStack(spacing: 0) {
+                RoleTabButton(title: "Member Account", isSelected: vm.selectedRole == .member) {
+                    withAnimation { vm.selectedRole = .member }
+                }
+                RoleTabButton(title: "Librarian Account", isSelected: vm.selectedRole == .librarian) {
+                    withAnimation { vm.selectedRole = .librarian }
+                }
+            }
+            .padding(.bottom, 24)
+
+            VStack(spacing: 16) {
+                VStack(spacing: 12) {
+                    TextField("Full Name", text: $vm.name)
+                        .inputStyle()
+                        
+                    TextField("Email Address", text: $vm.email)
+                        .textInputAutocapitalization(.never)
+                        .keyboardType(.emailAddress)
+                        .inputStyle()
+                        
+                    SecureField("Secure Password", text: $vm.password)
+                        .inputStyle()
+                }
+
+                if let msg = auth.errorMessage ?? vm.errorMessage {
+                    Text(msg)
+                        .font(.caption)
+                        .foregroundColor(.coral)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+
+                Button {
+                    Task { await vm.submit(auth: auth, modelContext: modelContext) }
+                } label: {
+                    if auth.isLoading || vm.isSubmitting {
+                        ProgressView().tint(.white)
+                    } else {
+                        Text("Register Securely")
+                    }
+                }
+                .buttonStyle(.primaryButton)
+                .padding(.top, 4)
+
+                Button("I already have an account", action: onGoToSignIn)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundColor(.accent)
+                    .buttonStyle(.plain)
+                    .padding(.top, 8)
+            }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 20)
+        }
+        .padding(.top, 10)
+=======
+        VStack(spacing: 16) {
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Create account")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.textPrimary)
+                Text("Use a light theme and SwiftData-backed profile")
+                    .font(.subheadline)
+                    .foregroundColor(.textSecondary)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+
+            VStack(spacing: 12) {
+                TextField("Name", text: $vm.name)
+                    .inputStyle()
+                TextField("Email", text: $vm.email)
+                    .textInputAutocapitalization(.never)
+                    .keyboardType(.emailAddress)
+                    .inputStyle()
+                Picker("Role", selection: $vm.selectedRole) {
+                    ForEach(UserRole.allCases, id: \.self) { role in
+                        Text(role.rawValue).tag(role)
+                    }
+                }
+                .pickerStyle(.segmented)
+            }
+
+            if let msg = auth.errorMessage ?? vm.errorMessage {
+                Text(msg)
+                    .font(.caption)
+                    .foregroundColor(.coral)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+
+            Button {
+                Task { await vm.submit(auth: auth, modelContext: modelContext) }
+            } label: {
+                if auth.isLoading || vm.isSubmitting {
+                    ProgressView().tint(.white)
+                } else {
+                    Text("Create account")
+                }
+            }
+            .buttonStyle(.primaryButton)
+
+            Button("I already have an account", action: onGoToSignIn)
+                .font(.subheadline.weight(.semibold))
+                .foregroundColor(.primary)
+                .buttonStyle(.plain)
+        }
+        .padding(20)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SignUpViewModel.swift ---
+<<<<<<< HEAD
+    var password: String = ""
+=======
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+            password: password.trimmingCharacters(in: .whitespacesAndNewlines),
+=======
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Auth/SplashView.swift ---
+<<<<<<< HEAD
+    @State private var scale: CGFloat = 0.8
+    @State private var opacity: Double = 0.0
+
+    var body: some View {
+        ZStack {
+            // Vibrant native background
+            Color.accent.ignoresSafeArea()
+            
+            VStack(spacing: 24) {
+                // High-fidelity icon representation
+                Image(systemName: "books.vertical.fill")
+                    .font(.system(size: 72, weight: .medium))
+                    .foregroundColor(.white)
+                    .background(
+                        Circle()
+                            .fill(Color.white.opacity(0.15))
+                            .frame(width: 140, height: 140)
+                    )
+                    .scaleEffect(scale)
+                    .opacity(opacity)
+
+                VStack(spacing: 8) {
+                    Text("Library Companion")
+                        .font(.title.weight(.heavy))
+                        .foregroundColor(.white)
+                        .scaleEffect(scale)
+                    
+                    Text("Member & Librarian Experience")
+                        .font(.subheadline.weight(.medium))
+                        .foregroundColor(.white.opacity(0.8))
+                }
+                .opacity(opacity)
+            }
+        }
+        .onAppear {
+            // Classic iOS Spring parameters for snap scale
+            withAnimation(.spring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.5)) {
+                scale = 1.0
+            }
+            // Ambient soft fade transition
+            withAnimation(.easeIn(duration: 0.5).delay(0.2)) {
+                opacity = 1.0
+            }
+        }
+=======
+    var body: some View {
+        VStack(spacing: 12) {
+            Image(systemName: "books.vertical.fill")
+                .font(.system(size: 44, weight: .semibold))
+                .foregroundColor(.primary)
+                .padding()
+                .background(Color.surfaceBg)
+                .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+
+            Text("Library Companion")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.textPrimary)
+
+            Text("Member & Librarian experience")
+                .font(.subheadline)
+                .foregroundColor(.textSecondary)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Components/ReadingMinutesChart.swift ---
+<<<<<<< HEAD
+                .foregroundStyle(Color.accent)
+=======
+                .foregroundStyle(Color.primary)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Books/AddBookView.swift ---
+<<<<<<< HEAD
+                Button("Add Book") {
+                    let book = Book(title: title, author: author, genre: genre, status: .available, rating: 0)
+                    modelContext.insert(book)
+                    try? modelContext.save()
+                    
+                    // Push simultaneously to the Firebase Cloud via our new Daemon Engine!
+                    FirebaseSyncService.shared.pushBookToCloud(book)
+                    
+=======
+                Button("Add") {
+                    let book = Book(title: title, author: author, genre: genre, status: .available, rating: 0)
+                    modelContext.insert(book)
+                    try? modelContext.save()
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/Dashboard/DashboardView.swift ---
+<<<<<<< HEAD
+                .foregroundStyle(Color.accent)
+=======
+                .foregroundStyle(Color.primary)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Librarian/LibrarianTabView.swift ---
+<<<<<<< HEAD
+        .tint(Color.accent)
+        .toolbarBackground(.visible, for: .tabBar)
+        .toolbarBackground(.ultraThinMaterial, for: .tabBar)
+        .environment(\.symbolVariants, .fill)
+=======
+        .tint(.primary)
+        .toolbarBackground(.visible, for: .tabBar)
+        .toolbarBackground(Color.cardBg, for: .tabBar)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Discover/DiscoverView.swift ---
+<<<<<<< HEAD
+    @State private var vm = DiscoverViewModel()
+    @StateObject private var speechRecognizer = SpeechRecognizer()
+=======
+    @State private var query = ""
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+                if !vm.query.isEmpty {
+                    VStack(spacing: 14) {
+                        VStack(alignment: .leading, spacing: 10) {
+                            ForEach(vm.filteredBooks(from: books)) { book in
+                                BookRow(book: book)
+                            }
+                            if vm.filteredBooks(from: books).isEmpty {
+                                Text("No books found.")
+                                    .foregroundColor(.textSecondary)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .padding()
+                            }
+                        }
+                        .lightCard()
+                    }
+                    .padding(20)
+                } else {
+                    LazyVStack(spacing: 24) {
+                        GenreCarousel(title: "New Arrivals & Coming Soon", books: Array(books.prefix(10)))
+                        GenreCarousel(title: "Fictions", books: books.filter { $0.genre.localizedCaseInsensitiveContains("Fiction") })
+                        GenreCarousel(title: "Literatures", books: books.filter { $0.genre.localizedCaseInsensitiveContains("Literature") })
+                        GenreCarousel(title: "Comics", books: books.filter { $0.genre.localizedCaseInsensitiveContains("Comic") })
+                        GenreCarousel(title: "Explore More", books: books.filter { 
+                            !$0.genre.localizedCaseInsensitiveContains("Fiction") && 
+                            !$0.genre.localizedCaseInsensitiveContains("Literature") && 
+                            !$0.genre.localizedCaseInsensitiveContains("Comic") 
+                        })
+                    }
+                    .padding(.vertical, 20)
+                }
+            }
+            .background(Color.pageBg.ignoresSafeArea())
+            .navigationTitle("Discover")
+            .searchable(text: $vm.query, prompt: "Search books, authors, genres")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        if speechRecognizer.isRecording {
+                            speechRecognizer.stopTranscribing()
+                        } else {
+                            speechRecognizer.startTranscribing()
+                        }
+                    }) {
+                        Image(systemName: speechRecognizer.isRecording ? "mic.fill" : "mic")
+                            .foregroundColor(speechRecognizer.isRecording ? .red : .accent)
+                            .font(.title3)
+                    }
+                }
+            }
+            .onChange(of: speechRecognizer.transcript) { newValue in
+                vm.query = newValue
+            }
+        }
+    }
+}
+
+struct GenreCarousel: View {
+    let title: String
+    let books: [Book]
+    
+    var body: some View {
+        if !books.isEmpty {
+            VStack(alignment: .leading, spacing: 16) {
+                Text(title)
+                    .font(.title2.weight(.bold))
+                    .foregroundColor(.textPrimary)
+                    .padding(.horizontal, 20)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 16) {
+                        ForEach(books) { book in
+                            BookCoverCard(book: book, width: 120, height: 180)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                }
+            }
+=======
+                VStack(spacing: 14) {
+                    TextField("Search books, authors, genres", text: $query)
+                        .inputStyle()
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Browse")
+                            .font(.headline)
+                            .foregroundColor(.textPrimary)
+                        ForEach(filtered) { book in
+                            BookRow(book: book)
+                        }
+                    }
+                    .lightCard()
+                }
+                .padding(20)
+            }
+            .background(Color.pageBg.ignoresSafeArea())
+            .navigationTitle("Discover")
+        }
+    }
+
+    private var filtered: [Book] {
+        guard !query.isEmpty else { return books }
+        return books.filter {
+            $0.title.localizedCaseInsensitiveContains(query)
+            || $0.author.localizedCaseInsensitiveContains(query)
+            || $0.genre.localizedCaseInsensitiveContains(query)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/HallsListView.swift ---
+<<<<<<< HEAD
+            List {
+                ForEach(halls) { hall in
+                    NavigationLink {
+                        HallDetailView(hall: hall)
+                    } label: {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(hall.name)
+                                .font(.headline)
+                                .foregroundColor(.textPrimary)
+                            Text("Floor \(hall.floor) • \(hall.seats.count) seats")
+                                .font(.caption)
+                                .foregroundColor(.textSecondary)
+                        }
+                        .padding(.vertical, 4)
+                    }
+                }
+            }
+            .listStyle(.insetGrouped)
+            .scrollContentBackground(.hidden)
+=======
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 14) {
+                    ForEach(halls) { hall in
+                        NavigationLink {
+                            HallDetailView(hall: hall)
+                        } label: {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(hall.name)
+                                        .font(.headline)
+                                        .foregroundColor(.textPrimary)
+                                    Text("Floor \(hall.floor) • \(hall.seats.count) seats")
+                                        .font(.caption)
+                                        .foregroundColor(.textSecondary)
+                                }
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.textSecondary)
+                            }
+                            .padding(16)
+                            .background(Color.cardBg)
+                            .cornerRadius(18)
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(20)
+            }
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Halls/SeatGridView.swift ---
+<<<<<<< HEAD
+                                .stroke(selectedSeat?.id == seat.id ? Color.accent : Color.clear, lineWidth: 2)
+=======
+                                .stroke(selectedSeat?.id == seat.id ? Color.primary : Color.clear, lineWidth: 2)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Home/HomeView.swift ---
+<<<<<<< HEAD
+    @State private var selectedCategory = "All"
+    
+    private let categories = ["All", "Fiction", "Non-Fiction", "Science", "History", "Technology"]
+=======
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+                LazyVStack(spacing: 24) {
+                    
+                    // 1. Search Bar (Type & Voice)
+                    NavigationLink(destination: DiscoverView()) {
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.textSecondary)
+                            Text("Search books...")
+                                .foregroundColor(.textSecondary)
+                            Spacer()
+                            Image(systemName: "mic.fill")
+                                .foregroundColor(.accent)
+                        }
+                        .padding(14)
+                        .background(Color.surfaceBg)
+                        .cornerRadius(12)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 10)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    // 2. Monthly Challenge Card
+                    HStack(spacing: 16) {
+                        ZStack {
+                            Circle()
+                                .stroke(Color.accent.opacity(0.2), lineWidth: 6)
+                            
+                            // Mocking progress (e.g., 2 out of 5 books read)
+                            Circle()
+                                .trim(from: 0, to: 2.0 / 5.0)
+                                .stroke(Color.accent, style: StrokeStyle(lineWidth: 6, lineCap: .round))
+                                .rotationEffect(.degrees(-90))
+                            
+                            Text("2/5")
+                                .font(.caption.weight(.bold))
+                                .foregroundColor(.textPrimary)
+                        }
+                        .frame(width: 50, height: 50)
+                        
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Monthly Challenge")
+                                .font(.headline)
+                                .foregroundColor(.textPrimary)
+                            Text("Read 5 books this month")
+                                .font(.caption)
+                                .foregroundColor(.textSecondary)
+                        }
+                        Spacer()
+                    }
+                    .padding(16)
+                    .background(Color.cardBg)
+                    .cornerRadius(16)
+                    .padding(.horizontal, 20)
+
+                    // 3. Two Cards: Reading Streak & Total Points
+                    HStack(spacing: 16) {
+                        // Streak Card
+                        VStack(spacing: 8) {
+                            Image(systemName: "flame.fill")
+                                .font(.title2)
+                                .foregroundColor(.orange)
+                            Text("\(vm.readingStreak)")
+                                .font(.title.weight(.bold))
+                                .foregroundColor(.textPrimary)
+                            Text("Streak")
+                                .font(.caption.weight(.medium))
+                                .foregroundColor(.textSecondary)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 20)
+                        .background(Color.cardBg)
+                        .cornerRadius(16)
+
+                        // Points Card
+                        VStack(spacing: 8) {
+                            Image(systemName: "star.fill")
+                                .font(.title2)
+                                .foregroundColor(.yellow)
+                            Text("\(vm.rewardPoints)")
+                                .font(.title.weight(.bold))
+                                .foregroundColor(.textPrimary)
+                            Text("Points")
+                                .font(.caption.weight(.medium))
+                                .foregroundColor(.textSecondary)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 20)
+                        .background(Color.cardBg)
+                        .cornerRadius(16)
+                    }
+                    .padding(.horizontal, 20)
+
+                    // 4. Quick Actions
+                    HStack(spacing: 16) {
+                        Button(action: {}) {
+                            VStack(spacing: 8) {
+                                Image(systemName: "viewfinder")
+                                    .font(.title2)
+                                    .foregroundColor(.accent)
+                                Text("Scan")
+                                    .font(.caption.weight(.medium))
+                                    .foregroundColor(.textPrimary)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 16)
+                            .background(Color.cardBg)
+                            .cornerRadius(12)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        Button(action: {}) {
+                            VStack(spacing: 8) {
+                                Image(systemName: "compass")
+                                    .font(.title2)
+                                    .foregroundColor(.accent)
+                                Text("Browse")
+                                    .font(.caption.weight(.medium))
+                                    .foregroundColor(.textPrimary)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 16)
+                            .background(Color.cardBg)
+                            .cornerRadius(12)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        Button(action: {}) {
+                            VStack(spacing: 8) {
+                                Image(systemName: "chair.fill")
+                                    .font(.title2)
+                                    .foregroundColor(.accent)
+                                Text("Seats")
+                                    .font(.caption.weight(.medium))
+                                    .foregroundColor(.textPrimary)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 16)
+                            .background(Color.cardBg)
+                            .cornerRadius(12)
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                    }
+                    .padding(.horizontal, 20)
+
+                    // 1. Current Reading
+                    if !vm.activeLoans.isEmpty {
+                        VStack(alignment: .leading, spacing: 16) {
+                            Text("Current Reading")
+                                .font(.title2.weight(.bold))
+                                .foregroundColor(.textPrimary)
+                                .padding(.horizontal, 20)
+                            
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 16) {
+                                    ForEach(vm.activeLoans.prefix(3)) { loan in
+                                        if let book = loan.book {
+                                            BookCoverCard(book: book, width: 100, height: 150)
+                                        }
+                                    }
+                                }
+                                .padding(.horizontal, 20)
+                            }
+                        }
+                    }
+
+                    // 2. Top Picks
+                    if !vm.featuredBooks.isEmpty {
+                        VStack(alignment: .leading, spacing: 16) {
+                            Text("Top Picks")
+                                .font(.title2.weight(.bold))
+                                .foregroundColor(.textPrimary)
+                                .padding(.horizontal, 20)
+                            
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 16) {
+                                    ForEach(vm.featuredBooks.prefix(5)) { book in
+                                        BookCoverCard(book: book)
+                                    }
+                                }
+                                .padding(.horizontal, 20)
+                            }
+                        }
+                    }
+                    
+                    // 3. Siri Suggestions
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack {
+                            Image(systemName: "sparkles")
+                                .foregroundColor(.accent)
+                            Text("Siri Suggestions")
+                                .font(.caption.weight(.bold))
+                                .foregroundColor(.textSecondary)
+                                .textCase(.uppercase)
+                        }
+                        .padding(.horizontal, 20)
+                        
+                        HStack(spacing: 12) {
+                            Image(systemName: "book.fill")
+                                .font(.title)
+                                .foregroundColor(.accent)
+                            
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Resume your session")
+                                    .font(.headline)
+                                    .foregroundColor(.textPrimary)
+                                Text("Jump back into 'The Swift Guide'")
+                                    .font(.caption)
+                                    .foregroundColor(.textSecondary)
+                            }
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.textSecondary)
+                        }
+                        .padding(16)
+                        .background(Color.cardBg)
+                        .cornerRadius(16)
+                        .padding(.horizontal, 20)
+                    }
+
+                    // 4. Reading Goals
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text("Reading Goals")
+                            .font(.title2.weight(.bold))
+                            .foregroundColor(.textPrimary)
+                            .padding(.horizontal, 20)
+                        
+                        VStack(spacing: 16) {
+                            Text("You are 2 books away from reaching your goal for this month. Keep up the great pace!")
+                                .font(.subheadline)
+                                .foregroundColor(.textSecondary)
+                                .multilineTextAlignment(.leading)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            
+                            HStack(spacing: 12) {
+                                Button(action: {}) {
+                                    Text("Keep Reading")
+                                        .font(.subheadline.weight(.semibold))
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity)
+                                        .padding(.vertical, 14)
+                                        .background(Color.accent)
+                                        .cornerRadius(12)
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                                
+                                Button(action: {}) {
+                                    Text("Adjust Goal")
+                                        .font(.subheadline.weight(.semibold))
+                                        .foregroundColor(.accent)
+                                        .frame(maxWidth: .infinity)
+                                        .padding(.vertical, 14)
+                                        .background(Color.accent.opacity(0.1))
+                                        .cornerRadius(12)
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                            }
+                        }
+                        .padding(16)
+                        .background(Color.cardBg)
+                        .cornerRadius(16)
+                        .padding(.horizontal, 20)
+                    }
+                    
+                    // 5. Alert for overdue books
+                    if let overdueLoan = vm.activeLoans.first(where: { $0.isOverdue }) {
+                        VStack(alignment: .leading, spacing: 12) {
+                            HStack {
+                                Image(systemName: "exclamationmark.triangle.fill")
+                                    .foregroundColor(.coral)
+                                Text("Overdue Book")
+                                    .font(.headline.weight(.semibold))
+                                    .foregroundColor(.textPrimary)
+                            }
+                            
+                            Text("\"\(overdueLoan.book?.title ?? "Book")\" is overdue. Please return it as soon as possible.")
+                                .font(.subheadline)
+                                .foregroundColor(.textSecondary)
+                                .multilineTextAlignment(.leading)
+                        }
+                        .padding(16)
+                        .background(Color.cardBg)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .stroke(Color.coral.opacity(0.3), lineWidth: 1)
+                        )
+                        .padding(.horizontal, 20)
+                    }
+                }
+                .padding(.bottom, 20)
+            }
+            .background(Color.pageBg.ignoresSafeArea())
+            .navigationTitle("Dashboard")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack(spacing: 16) {
+                        Button(action: {
+                            // TODO: Notifications
+                        }) {
+                            Image(systemName: "bell.fill")
+                                .foregroundColor(.accent)
+                        }
+                        
+                        Button(action: {
+                            // TODO: Profile Actions
+                        }) {
+                            Image(systemName: "person.circle.fill")
+                                .foregroundColor(.accent)
+                                .font(.title3)
+                        }
+                    }
+                }
+            }
+=======
+                VStack(spacing: 16) {
+                    // Reading Streak and Points
+                    HStack(spacing: 16) {
+                        VStack {
+                            Text("\(vm.readingStreak)")
+                                .font(.title)
+                                .fontWeight(.bold)
+                            Text("Day Streak")
+                                .font(.caption)
+                                .foregroundColor(.textSecondary)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .lightCard()
+
+                        VStack {
+                            Text("\(vm.rewardPoints)")
+                                .font(.title)
+                                .fontWeight(.bold)
+                            Text("Points")
+                                .font(.caption)
+                                .foregroundColor(.textSecondary)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .lightCard()
+                    }
+
+                    ReadingMinutesChart(sessions: sessions.filter { $0.userId == user.id })
+                        .lightCard()
+
+                    // Alerts
+                    if let overdueLoan = vm.activeLoans.first(where: { $0.isOverdue }) {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Overdue Alert")
+                                .font(.headline)
+                                .foregroundColor(.coral)
+                            Text("\"\(overdueLoan.book?.title ?? "Book")\" is overdue.")
+                                .font(.subheadline)
+                        }
+                        .lightCard()
+                    }
+
+                    // Current Loans
+                    if !vm.activeLoans.isEmpty {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text("Current Loans")
+                                .font(.headline)
+                                .foregroundColor(.textPrimary)
+                            ForEach(vm.activeLoans) { loan in
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text(loan.book?.title ?? "Unknown")
+                                            .font(.subheadline)
+                                            .fontWeight(.semibold)
+                                        Text("Due: \(loan.dueAt.formatted(date: .abbreviated, time: .omitted))")
+                                            .font(.caption)
+                                            .foregroundColor(loan.isOverdue ? .coral : .textSecondary)
+                                    }
+                                    Spacer()
+                                    if loan.isOverdue {
+                                        Text("Overdue")
+                                            .font(.caption)
+                                            .foregroundColor(.coral)
+                                    }
+                                }
+                            }
+                        }
+                        .lightCard()
+                    }
+
+                    // Active Reservations
+                    if !vm.activeReservations.isEmpty {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text("Active Reservations")
+                                .font(.headline)
+                                .foregroundColor(.textPrimary)
+                            ForEach(vm.activeReservations) { reservation in
+                                HStack {
+                                    Text(reservation.book?.title ?? "Unknown")
+                                        .font(.subheadline)
+                                    Spacer()
+                                    Text(reservation.status.rawValue)
+                                        .font(.caption)
+                                        .foregroundColor(.textSecondary)
+                                }
+                            }
+                        }
+                        .lightCard()
+                    }
+
+                    // Quick Actions
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Quick Actions")
+                            .font(.headline)
+                            .foregroundColor(.textPrimary)
+                        HStack(spacing: 12) {
+                            Button("Scan Book") {
+                                // TODO: Implement scan
+                            }
+                            .buttonStyle(.secondaryButton)
+                            .frame(maxWidth: .infinity)
+
+                            Button("Reserve Seat") {
+                                // TODO: Navigate to halls
+                            }
+                            .buttonStyle(.secondaryButton)
+                            .frame(maxWidth: .infinity)
+                        }
+                    }
+                    .lightCard()
+
+                    if vm.isLoading {
+                        ProgressView().tint(.primary)
+                    }
+
+                    if let msg = vm.errorMessage {
+                        Text(msg).foregroundColor(.coral)
+                    }
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Featured")
+                            .font(.headline)
+                            .foregroundColor(.textPrimary)
+                        ForEach(vm.featuredBooks) { book in
+                            BookRow(book: book)
+                        }
+                    }
+                    .lightCard()
+                }
+                .padding(20)
+            }
+            .background(Color.pageBg.ignoresSafeArea())
+            .navigationTitle("Home")
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Library/LibraryView.swift ---
+<<<<<<< HEAD
+            Group {
+                if books.isEmpty {
+                    ContentUnavailableView("Library Empty", systemImage: "books.vertical", description: Text("You don't have any books added to your library yet."))
+                } else {
+                    List {
+                        ForEach(books) { book in
+                            BookRow(book: book)
+                        }
+                    }
+                    .listStyle(.insetGrouped)
+                }
+            }
+            .scrollContentBackground(.hidden)
+            .background(Color.pageBg.ignoresSafeArea())
+=======
+            List {
+                ForEach(books) { book in
+                    BookRow(book: book)
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.pageBg)
+                }
+            }
+            .listStyle(.plain)
+            .scrollContentBackground(.hidden)
+            .background(Color.pageBg)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/MemberTabView.swift ---
+<<<<<<< HEAD
+=======
+            HallsListView()
+                .tabItem { Label("Halls", systemImage: "chair.lounge.fill") }
+
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+        .tint(Color.accent)
+        .toolbarBackground(.visible, for: .tabBar)
+        .toolbarBackground(.ultraThinMaterial, for: .tabBar)
+        .environment(\.symbolVariants, .fill)
+=======
+        .tint(.primary)
+        .toolbarBackground(.visible, for: .tabBar)
+        .toolbarBackground(Color.cardBg, for: .tabBar)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Profile/ProfileView.swift ---
+<<<<<<< HEAD
+            Form {
+                Section {
+                    HStack(spacing: 16) {
+                        Circle()
+                            .fill(Color.surfaceBg)
+                            .frame(width: 70, height: 70)
+                            .overlay(
+                                Text(user.name.prefix(1))
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.accent)
+                            )
+                        
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(user.name)
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .foregroundColor(.textPrimary)
+                            
+                            Text(user.email)
+                                .font(.subheadline)
+                                .foregroundColor(.textSecondary)
+                        }
+                    }
+                    .padding(.vertical, 8)
+                }
+                
+                Section(footer: Text("Uses Face ID / Touch ID with passcode fallback.")) {
+                    Toggle(isOn: $biometricToggle) {
+                        Label("Require Authentication", systemImage: "faceid")
+                            .foregroundColor(.textPrimary)
+                    }
+                    .tint(.accent)
+                    .onChange(of: biometricToggle) { _, newValue in
+                        auth.setBiometricEnabled(newValue, for: user, modelContext: modelContext)
+                    }
+                }
+                
+                Section {
+                    Button(role: .destructive) {
+                        auth.signOut()
+                    } label: {
+                        HStack {
+                            Spacer()
+                            Text("Sign out")
+                                .fontWeight(.medium)
+                            Spacer()
+                        }
+                    }
+                }
+            }
+            .scrollContentBackground(.hidden)
+=======
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 16) {
+                    VStack(spacing: 10) {
+                        Circle()
+                            .fill(Color.surfaceBg)
+                            .frame(width: 78, height: 78)
+                            .overlay(
+                                Text(user.name.prefix(1))
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.primary)
+                            )
+
+                        Text(user.name)
+                            .font(.title3)
+                            .fontWeight(.bold)
+                            .foregroundColor(.textPrimary)
+
+                        Text(user.email)
+                            .font(.subheadline)
+                            .foregroundColor(.textSecondary)
+                    }
+                    .lightCard()
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        Toggle("Require authentication on re-entry", isOn: $biometricToggle)
+                            .tint(.primary)
+                            .onChange(of: biometricToggle) { _, newValue in
+                                auth.setBiometricEnabled(newValue, for: user, modelContext: modelContext)
+                            }
+
+                        Text("Uses Face ID / Touch ID with passcode fallback.")
+                            .font(.caption)
+                            .foregroundColor(.textSecondary)
+                    }
+                    .lightCard()
+
+                    Button("Sign out") { auth.signOut() }
+                        .buttonStyle(.secondaryButton)
+                }
+                .padding(20)
+            }
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Member/Rewards/RewardsView.swift ---
+<<<<<<< HEAD
+                                        .foregroundColor(.accent)
+=======
+                                        .foregroundColor(.primary)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+                .foregroundStyle(Color.accent)
+=======
+                .foregroundStyle(Color.primary)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+                .foregroundStyle(Color.accent)
+=======
+                .foregroundStyle(Color.primary)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Models/Models.swift ---
+<<<<<<< HEAD
+    var password: String // Mandatory DB parameter
+    var roleRaw: String
+    var isBiometricEnabled: Bool
+    
+    // Core Registration Form Analytics
+    var membershipId: String?
+    var phoneNumber: String?
+    var address: String?
+    
+    var createdAt: Date
+
+    init(id: UUID = UUID(), name: String, email: String, password: String = "", role: UserRole, isBiometricEnabled: Bool = false, membershipId: String? = nil, phoneNumber: String? = nil, address: String? = nil, createdAt: Date = .now) {
+        self.id = id
+        self.name = name
+        self.email = email
+        self.password = password
+        self.roleRaw = role.rawValue
+        self.isBiometricEnabled = isBiometricEnabled
+        self.membershipId = membershipId
+        self.phoneNumber = phoneNumber
+        self.address = address
+=======
+    var roleRaw: String
+    var isBiometricEnabled: Bool
+    var createdAt: Date
+
+    init(id: UUID = UUID(), name: String, email: String, role: UserRole, isBiometricEnabled: Bool = false, createdAt: Date = .now) {
+        self.id = id
+        self.name = name
+        self.email = email
+        self.roleRaw = role.rawValue
+        self.isBiometricEnabled = isBiometricEnabled
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Services/AuthService.swift ---
+<<<<<<< HEAD
+import FirebaseAuth
+import FirebaseFirestore
+=======
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+    var autoLockTimeoutSeconds: TimeInterval = 0 // Instant biometrics
+    private var lastBackgroundAt: Date?
+    private let loggedInUserIdKey = "loggedInAppUserId"
+=======
+    var autoLockTimeoutSeconds: TimeInterval = 300
+    private var lastBackgroundAt: Date?
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+            
+            // Check native Firebase Session!
+            if let userFirebase = Auth.auth().currentUser, let userEmail = userFirebase.email {
+                let uuid = UUID(uuidString: userFirebase.uid) ?? UUID()
+                
+                let predicate = #Predicate<AppUser> { $0.email == userEmail }
+                let descriptor = FetchDescriptor<AppUser>(predicate: predicate)
+                
+                if let localUser = try modelContext.fetch(descriptor).first {
+                    state = .signedIn(localUser)
+                    stateSubject.send(state)
+                    // FaceID Lock parameter natively
+                    isAppLocked = true
+                }
+            } else if let savedUserIdString = UserDefaults.standard.string(forKey: loggedInUserIdKey),
+                      let savedUserId = UUID(uuidString: savedUserIdString) {
+                // ... fallback to legacy defaults if auth absent
+                let predicate = #Predicate<AppUser> { $0.id == savedUserId }
+                let descriptor = FetchDescriptor<AppUser>(predicate: predicate)
+                if let user = try modelContext.fetch(descriptor).first {
+                    state = .signedIn(user)
+                    stateSubject.send(state)
+                    isAppLocked = true
+                }
+            }
+        } catch {
+            errorMessage = "Failed to load logic."
+=======
+        } catch {
+            errorMessage = "Failed to seed data."
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+    func signIn(email: String, password: String, role: UserRole, modelContext: ModelContext) async {
+=======
+    func signIn(email: String, role: UserRole, modelContext: ModelContext) async {
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+            // Real Global Network Request!
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            let uid = result.user.uid
+            
+            // Fetch strict Role Metadata from the Cloud Sandbox
+            let doc = try await Firestore.firestore().collection("users").document(uid).getDocument()
+            
+            guard let data = doc.data(),
+                  let rawRole = data["role"] as? String else {
+                errorMessage = "Account format corrupted remotely."
+                return
+            }
+            
+            if rawRole != role.rawValue {
+                errorMessage = "Incorrect Role selected! Ensure you use the right portal."
+                return
+            }
+            
+            // Verify natively in local Cache or create dynamically
+            let finalUID = UUID(uuidString: uid) ?? UUID()
+            let predicate = #Predicate<AppUser> { $0.email == email }
+            let descriptor = FetchDescriptor<AppUser>(predicate: predicate)
+            
+            if let localUser = try modelContext.fetch(descriptor).first {
+                state = .signedIn(localUser)
+                UserDefaults.standard.set(localUser.id.uuidString, forKey: loggedInUserIdKey)
+                stateSubject.send(state)
+            } else {
+                // If it exists in the cloud but not locally, build it!
+                let name = data["name"] as? String ?? "User"
+                let newUser = AppUser(id: finalUID, name: name, email: email, password: password, role: role)
+                modelContext.insert(newUser)
+                try modelContext.save()
+                state = .signedIn(newUser)
+                UserDefaults.standard.set(newUser.id.uuidString, forKey: loggedInUserIdKey)
+                stateSubject.send(state)
+            }
+        } catch {
+            errorMessage = error.localizedDescription
+=======
+            try await Task.sleep(for: .milliseconds(450))
+            let roleRaw = role.rawValue
+            let predicate = #Predicate<AppUser> { $0.email == email && $0.roleRaw == roleRaw }
+            let descriptor = FetchDescriptor<AppUser>(predicate: predicate)
+            if let user = try modelContext.fetch(descriptor).first {
+                state = .signedIn(user)
+                stateSubject.send(state)
+            } else {
+                errorMessage = "No account found for that email/role."
+            }
+        } catch {
+            errorMessage = "Sign in failed."
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+    func signUp(name: String, email: String, password: String, role: UserRole, modelContext: ModelContext) async {
+=======
+    func signUp(name: String, email: String, role: UserRole, modelContext: ModelContext) async {
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+            // Enterprise Network Google Creation!
+            let result = try await Auth.auth().createUser(withEmail: email, password: password)
+            let uid = result.user.uid
+            let parsedUUID = UUID(uuidString: uid) ?? UUID()
+            
+            // Push precise Identity metrics asynchronously into the specific Firebase metadata bucket natively
+            let payload: [String: Any] = [
+                "name": name,
+                "email": email,
+                "role": role.rawValue,
+                "createdAt": FieldValue.serverTimestamp()
+            ]
+            try await Firestore.firestore().collection("users").document(uid).setData(payload)
+            
+            // Generate standard Local SwiftData counterpart
+            let user = AppUser(id: parsedUUID, name: name, email: email, password: password, role: role)
+            modelContext.insert(user)
+            try modelContext.save()
+            
+            state = .signedIn(user)
+            UserDefaults.standard.set(user.id.uuidString, forKey: loggedInUserIdKey)
+            stateSubject.send(state)
+        } catch {
+            errorMessage = error.localizedDescription
+=======
+            try await Task.sleep(for: .milliseconds(550))
+            let user = AppUser(name: name, email: email, role: role)
+            modelContext.insert(user)
+            try modelContext.save()
+            state = .signedIn(user)
+            stateSubject.send(state)
+        } catch {
+            errorMessage = "Sign up failed."
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+        UserDefaults.standard.set(user.id.uuidString, forKey: loggedInUserIdKey)
+=======
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+<<<<<<< HEAD
+        // Break network socket permanently
+        try? Auth.auth().signOut()
+        
+        state = .signedOut
+        isAppLocked = false
+        lastBackgroundAt = nil
+        UserDefaults.standard.removeObject(forKey: loggedInUserIdKey)
+=======
+        state = .signedOut
+        isAppLocked = false
+        lastBackgroundAt = nil
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ThemeColors.swift ---
+<<<<<<< HEAD
+    // Dynamic Colors for perfect iOS support
+    static let pageBg = Color(UIColor { traitCollection in
+        traitCollection.userInterfaceStyle == .dark ? UIColor(Color(hex: "1E1E1E")) : UIColor(Color(hex: "F7F5FF"))
+    })
+    
+    static let cardBg = Color(UIColor { traitCollection in
+        traitCollection.userInterfaceStyle == .dark ? UIColor(Color(hex: "29292A")) : UIColor(Color(hex: "FFFFFF"))
+    })
+    
+    static let surfaceBg = Color(UIColor { traitCollection in
+        traitCollection.userInterfaceStyle == .dark ? UIColor(Color(hex: "343436")) : UIColor(Color(hex: "EEF0FB"))
+    })
+    
+    static let accent = Color(UIColor { traitCollection in
+        traitCollection.userInterfaceStyle == .dark ? UIColor(Color(hex: "8166FF")) : UIColor(Color(hex: "6C63FF"))
+    }) // Replaces custom `.primary` to avoid Apple's `.primary` text color conflicts
+    
+    // Explicit Dark mappings for compatibility with older code while refactoring
+    static let darkPrimary       = Color(hex: "8166FF")
+    static let darkSurfaceBg     = Color(hex: "343436")
+    static let darkTextPrimary   = Color(hex: "FFFFFF")
+    static let darkTextSecondary = Color(hex: "A3A3A9")
+    static let darkCardBg        = Color(hex: "29292A")
+    static let darkAccent        = Color(hex: "A794FF")
+
+    static let coral         = Color(hex: "FF6584")
+    static let teal          = Color(hex: "2DBD9B")
+    static let amber         = Color(hex: "FFB347")
+    static let textPrimary   = Color(UIColor { tc in tc.userInterfaceStyle == .dark ? UIColor(Color(hex: "FFFFFF")) : UIColor(Color(hex: "1A1A2E")) })
+    static let textSecondary = Color(UIColor { tc in tc.userInterfaceStyle == .dark ? UIColor(Color(hex: "A3A3A9")) : UIColor(Color(hex: "6B6B8A")) })
+    static let divider       = Color(UIColor { tc in tc.userInterfaceStyle == .dark ? UIColor(Color(hex: "3A3A3D")) : UIColor(Color(hex: "E4E2F5")) })
+=======
+    static let pageBg        = Color(hex: "F7F5FF")  // soft lavender-white
+    static let cardBg        = Color(hex: "FFFFFF")
+    static let surfaceBg     = Color(hex: "EEF0FB")  // chip and input fills
+    static let primary       = Color(hex: "6C63FF")  // purple — CTAs, active state
+    static let coral         = Color(hex: "FF6584")  // error, overdue, highlights
+    static let teal          = Color(hex: "2DBD9B")  // success, available
+    static let amber         = Color(hex: "FFB347")  // warning, reserved
+    static let textPrimary   = Color(hex: "1A1A2E")
+    static let textSecondary = Color(hex: "6B6B8A")
+    static let divider       = Color(hex: "E4E2F5")
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/InputFieldStyle.swift ---
+<<<<<<< HEAD
+                    .stroke(isFocused ? Color.accent : Color.clear, lineWidth: 1.5)
+=======
+                    .stroke(isFocused ? Color.primary : Color.clear, lineWidth: 1.5)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/LightCardModifier.swift ---
+<<<<<<< HEAD
+            .shadow(color: Color.black.opacity(0.2), radius: 12, y: 4)
+=======
+            .shadow(color: Color.primary.opacity(0.08), radius: 12, y: 4)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+
+
+--- /Users/cobsccomp242p-062/Documents/SmartLibrary-main-2/LibraryApp/Theme/ViewModifiers/PrimaryButtonStyle.swift ---
+<<<<<<< HEAD
+            .background(Color.accent)
+            .cornerRadius(14)
+            .scaleEffect(configuration.isPressed ? 0.96 : 1)
+            .animation(.spring(response: 0.3, dampingFraction: 0.6), value: configuration.isPressed)
+            .opacity(configuration.isPressed ? 0.9 : 1)
+=======
+            .background(Color.primary)
+            .cornerRadius(14)
+            .opacity(configuration.isPressed ? 0.8 : 1)
+>>>>>>> 50886afbd0b6837a06f6b0447ec8609636c51896
+

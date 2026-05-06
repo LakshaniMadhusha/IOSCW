@@ -1,0 +1,67 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project LibraryApp.xcodeproj -scheme LibraryApp -sdk iphonesimulator build
+
+Build settings from command line:
+    SDKROOT = iphonesimulator26.2
+
+2026-04-22 17:12:13.576 xcodebuild[91770:30385136] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+{ platform:iOS Simulator, arch:arm64, id:84AB4EA0-946A-4DC3-970D-47F769EBA879, OS:26.2, name:iPad (A16) }
+{ platform:iOS Simulator, arch:arm64, id:15DDB5A9-A216-4B79-944B-0522DF551CFB, OS:26.2, name:iPad Air 11-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:6E86921F-B46C-4737-88EC-C2961C357CD8, OS:26.2, name:iPad Air 13-inch (M3) }
+{ platform:iOS Simulator, arch:arm64, id:DF554597-F775-447A-8D9C-F723AFFA7F55, OS:26.2, name:iPad Pro 11-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:C9E4D7CA-9897-488C-8BF9-B5E0D17211E6, OS:26.2, name:iPad Pro 13-inch (M5) }
+{ platform:iOS Simulator, arch:arm64, id:DDA4FC6F-F1D5-4B9F-899B-F1F2123E0B03, OS:26.2, name:iPad mini (A17 Pro) }
+{ platform:iOS Simulator, arch:arm64, id:3F3EB372-3AB7-4F4B-8E38-6D42A1E2E7F1, OS:26.2, name:iPhone 16e }
+{ platform:iOS Simulator, arch:arm64, id:A2D18B24-C205-43EE-B8A5-67E15E2BABA1, OS:26.2, name:iPhone 17 }
+{ platform:iOS Simulator, arch:arm64, id:A2287338-D35A-46E8-98F7-1F757C31499F, OS:26.2, name:iPhone 17 Pro }
+{ platform:iOS Simulator, arch:arm64, id:4E265C66-79F5-4E64-AF1C-D3367243B52E, OS:26.2, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:arm64, id:07AD0EF0-9517-4EF3-BD83-951A13E545D4, OS:26.2, name:iPhone Air }
+{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00008122-0016519A0081401C, name:My Mac }
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'LibraryApp' in project 'LibraryApp' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/cobsccomp242p-062/Documents/SmartLibrary-main/LibraryApp/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 54225f4484f1cc36fe8a8d13de93843e
+Build description path: /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Intermediates.noindex/XCBuildData/54225f4484f1cc36fe8a8d13de93843e.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C53-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache
+    cd /Users/cobsccomp242p-062/Documents/SmartLibrary-main/LibraryApp.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -o /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C53-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache
+
+ProcessInfoPlistFile /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Products/Debug-iphonesimulator/LibraryApp.app/Info.plist /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Intermediates.noindex/LibraryApp.build/Debug-iphonesimulator/LibraryApp.build/empty-LibraryApp.plist (in target 'LibraryApp' from project 'LibraryApp')
+    cd /Users/cobsccomp242p-062/Documents/SmartLibrary-main
+    builtin-infoPlistUtility /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Intermediates.noindex/LibraryApp.build/Debug-iphonesimulator/LibraryApp.build/empty-LibraryApp.plist -producttype com.apple.product-type.application -genpkginfo /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Products/Debug-iphonesimulator/LibraryApp.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Intermediates.noindex/LibraryApp.build/Debug-iphonesimulator/LibraryApp.build/assetcatalog_generated_info.plist -o /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Products/Debug-iphonesimulator/LibraryApp.app/Info.plist
+
+CopySwiftLibs /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Products/Debug-iphonesimulator/LibraryApp.app (in target 'LibraryApp' from project 'LibraryApp')
+    cd /Users/cobsccomp242p-062/Documents/SmartLibrary-main
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Products/Debug-iphonesimulator/LibraryApp.app/LibraryApp.debug.dylib --scan-folder /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Products/Debug-iphonesimulator/LibraryApp.app/Frameworks --scan-folder /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Products/Debug-iphonesimulator/LibraryApp.app/PlugIns --scan-folder /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Products/Debug-iphonesimulator/LibraryApp.app/SystemExtensions --scan-folder /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Products/Debug-iphonesimulator/LibraryApp.app/Extensions --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Products/Debug-iphonesimulator/LibraryApp.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/cobsccomp242p-062/Library/Developer/Xcode/DerivedData/LibraryApp-bsizibajfjtbxphjgitxrnsulqtp/Build/Intermediates.noindex/LibraryApp.build/Debug-iphonesimulator/LibraryApp.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+** BUILD SUCCEEDED **
+
