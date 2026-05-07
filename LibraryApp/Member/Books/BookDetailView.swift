@@ -12,7 +12,8 @@ struct BookDetailView: View {
     
     var body: some View {
         ZStack {
-            Color.pageBg.ignoresSafeArea()
+            // Ambient Background Wash (Dynamic Blur)
+            ambientBackground
             
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 0) {
@@ -24,12 +25,12 @@ struct BookDetailView: View {
                         // ── Title & Author ─────────────────────────────────────
                         VStack(spacing: 4) {
                             Text(book.title)
-                                .font(.system(size: 24, weight: .bold, design: .rounded))
-                                .foregroundColor(.white)
+                                .font(.system(size: 28, weight: .bold, design: .rounded))
+                                .foregroundColor(.textPrimary)
                                 .multilineTextAlignment(.center)
                             
                             Text(book.author)
-                                .font(.system(size: 16, weight: .medium, design: .rounded))
+                                .font(.system(size: 18, weight: .semibold, design: .rounded))
                                 .foregroundColor(.textSecondary)
                         }
                         .padding(.top, 20)
@@ -85,16 +86,49 @@ struct BookDetailView: View {
     
     // MARK: - Components
     
-    private var headerArea: some View {
-        ZStack {
-            // Ambient Background Wash
+    private var ambientBackground: some View {
+        ZStack(alignment: .top) {
+            if let coverUrl = book.coverUrl, let url = URL(string: coverUrl) {
+                AsyncImage(url: url) { phase in
+                    if let image = phase.image {
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(height: 500)
+                            .blur(radius: 50)
+                            .overlay(Color.black.opacity(0.05))
+                    } else {
+                        Color.purple.opacity(0.1)
+                    }
+                }
+            } else {
+                Color.purple.opacity(0.1)
+            }
+            
             LinearGradient(
-                colors: [Color.purple.opacity(0.15), Color.pageBg],
+                colors: [.clear, Color.pageBg.opacity(0.6), Color.pageBg],
                 startPoint: .top,
                 endPoint: .bottom
             )
-            .frame(height: 400)
+            .frame(height: 550)
             
+            Rectangle()
+                .fill(.ultraThinMaterial)
+                .mask(
+                    LinearGradient(
+                        colors: [.black, .black.opacity(0.8), .clear],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
+                .frame(height: 400)
+        }
+        .ignoresSafeArea()
+        .accessibilityHidden(true)
+    }
+    
+    private var headerArea: some View {
+        ZStack {
             // Centered Cover
             AsyncImage(url: URL(string: book.coverUrl ?? "")) { phase in
                 switch phase {
@@ -102,9 +136,9 @@ struct BookDetailView: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 180, height: 260)
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                        .shadow(color: Color.purpleAccent.opacity(0.3), radius: 20, x: 0, y: 15)
+                        .frame(width: 200, height: 280)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                        .shadow(color: .black.opacity(0.3), radius: 30, x: 0, y: 20)
                 default:
                     VStack(spacing: 12) {
                         Image(systemName: "book.closed.fill")
@@ -116,12 +150,13 @@ struct BookDetailView: View {
                             .multilineTextAlignment(.center)
                             .padding(.horizontal)
                     }
-                    .frame(width: 180, height: 260)
+                    .frame(width: 200, height: 280)
                     .background(Color.cardBg)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
             }
             .padding(.top, 60)
+            .padding(.bottom, 20)
         }
     }
     
@@ -164,6 +199,8 @@ struct BookDetailView: View {
                     .foregroundColor(.textSecondary)
             }
             .frame(maxWidth: .infinity)
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("Rating: \(String(format: "%.1f", book.rating)) stars")
             
             Divider().background(Color.divider).frame(height: 20)
             
@@ -178,6 +215,8 @@ struct BookDetailView: View {
                     .foregroundColor(.textSecondary)
             }
             .frame(maxWidth: .infinity)
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("Genre: \(book.genre)")
             
             Divider().background(Color.divider).frame(height: 20)
             
@@ -200,6 +239,8 @@ struct BookDetailView: View {
                 }
             }
             .frame(maxWidth: .infinity)
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel(book.isAvailable ? "Available: \(book.availableCopies) copies" : "Waitlist: \(book.totalCopies) copies total")
         }
         .padding(.vertical, 12)
     }

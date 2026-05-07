@@ -30,36 +30,31 @@ final class HomeViewModel {
 
             let userId = user.id
 
-            // ✅ Featured books — no predicate needed
+            // ✅ Featured books
             featuredBooks = try modelContext
                 .fetch(FetchDescriptor<Book>())
                 .shuffled()
                 .prefix(4)
                 .map { $0 }
 
-            // ✅ Active loans — fetch all, filter in memory
-            // #Predicate cannot traverse optional relationships (loan.user?.id)
-            // so we fetch all loans and filter by userId in Swift
+            // ✅ Active loans
             let allLoans = try modelContext.fetch(FetchDescriptor<Loan>())
             activeLoans = allLoans.filter {
                 $0.returnedAt == nil && $0.user?.id == userId
             }
 
-            // Schedule due date reminders for active loans
+            // Schedule due date reminders
             for loan in activeLoans {
                 NotificationService.shared.scheduleDueDateReminder(for: loan, modelContext: modelContext)
             }
 
-            // ✅ Approved reservations — same pattern
-            // ReservationStatus is a Codable enum stored as String rawValue
-            // SwiftData can predicate on rawValue strings but NOT on
-            // optional relationship keypaths, so filter in memory
+            // ✅ Approved reservations
             let allReservations = try modelContext.fetch(FetchDescriptor<Reservation>())
             activeReservations = allReservations.filter {
                 $0.status == .approved && $0.user?.id == userId
             }
 
-            // Schedule pickup alerts for approved reservations
+            // Schedule pickup alerts
             for reservation in activeReservations {
                 NotificationService.shared.schedulePickupAlert(for: reservation, modelContext: modelContext)
             }
@@ -75,7 +70,7 @@ final class HomeViewModel {
                 .filter { $0.userId == userId && $0.status == .confirmed }
                 .sorted { $0.bookingDate < $1.bookingDate }
 
-            // ✅ Reading sessions — userId is a flat UUID, safe to predicate
+            // ✅ Reading sessions
             let sessionDescriptor = FetchDescriptor<ReadingSession>(
                 predicate: #Predicate<ReadingSession> { session in
                     session.userId == userId
@@ -87,6 +82,34 @@ final class HomeViewModel {
             readingStreak = calculateStreak(from: userSessions)
             rewardPoints = userSessions.reduce(0) { $0 + ($1.minutes / 10) + $1.challengeBonus }
 
+            // ✅ Sync to Smart Widget
+            let provider = WidgetDataProvider.shared
+            provider.updatePoints(rewardPoints)
+            provider.updateStreak(readingStreak)
+            
+            // Sync most urgent book due date with Shelf Assistant
+            if let mostUrgentLoan = activeLoans.sorted(by: { $0.dueAt < $1.dueAt }).first {
+                provider.updateNextDue(
+                    title: mostUrgentLoan.book?.title ?? "Book", 
+                    date: mostUrgentLoan.dueAt, 
+                    shelf: mostUrgentLoan.book?.shelfCode
+                )
+            }
+            
+            // Sync next hall reservation with location
+            if let nextHall = upcomingHallReservations.first {
+                let hallName = nextHall.hallName
+                // Try to find the hall coordinates (Mock or fetch)
+                provider.updateNextReservation(title: hallName, date: nextHall.bookingDate)
+            }
+            
+            // Sync daily reading goal
+            let todayMins = userSessions.filter { Calendar.current.isDateInToday($0.startedAt) }.reduce(0) { $0 + $1.minutes }
+            provider.updateReadingProgress(minutes: todayMins, goal: 30)
+
+            // Seed Test Books for VisionKit Testing
+            seedTestData(modelContext: modelContext)
+
         } catch {
             errorMessage = "Failed to load home data."
         }
@@ -95,25 +118,17 @@ final class HomeViewModel {
     // MARK: - Helpers
 
     private func calculateStreak(from sessions: [ReadingSession]) -> Int {
-        // sessions are already sorted newest → oldest
         guard !sessions.isEmpty else { return 0 }
-
         let calendar = Calendar.current
-
-        // Collect unique days that had a session
         let uniqueDays: [Date] = sessions
             .map { calendar.startOfDay(for: $0.startedAt) }
             .reduce(into: [Date]()) { result, day in
                 if result.last != day { result.append(day) }
             }
-
         guard let mostRecentDay = uniqueDays.first else { return 0 }
-
-        // Streak only counts if the most recent session was today or yesterday
         let today = calendar.startOfDay(for: .now)
         let yesterday = calendar.date(byAdding: .day, value: -1, to: today)!
         guard mostRecentDay == today || mostRecentDay == yesterday else { return 0 }
-
         var streak = 1
         for i in 1 ..< uniqueDays.count {
             let expected = calendar.date(byAdding: .day, value: -i, to: mostRecentDay)!
@@ -124,5 +139,31 @@ final class HomeViewModel {
             }
         }
         return streak
+    }
+
+    @MainActor
+    private func seedTestData(modelContext: ModelContext) {
+        let existingBooks = try? modelContext.fetch(FetchDescriptor<Book>())
+        if let existing = existingBooks, !existing.contains(where: { $0.isbn == "9780743273565" }) {
+            let gatsby = Book(
+                title: "The Great Gatsby",
+                author: "F. Scott Fitzgerald",
+                genre: "Classic Literature",
+                isbn: "9780743273565",
+                shelfCode: "A-12"
+            )
+            modelContext.insert(gatsby)
+        }
+        if let existing = existingBooks, !existing.contains(where: { $0.isbn == "9780142437230" }) {
+            let quixote = Book(
+                title: "Don Quixote",
+                author: "Miguel de Cervantes",
+                genre: "Adventure",
+                isbn: "9780142437230",
+                shelfCode: "B-05"
+            )
+            modelContext.insert(quixote)
+        }
+        try? modelContext.save()
     }
 }

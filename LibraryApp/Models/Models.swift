@@ -20,6 +20,11 @@ final class AppUser: Identifiable {
     var phoneNumber: String?
     var address: String?
     
+    // New Profile Details
+    var occupation: String?
+    var bio: String?
+    var favoriteGenre: String?
+    
     var createdAt: Date
     var profileImageData: Data?
 
@@ -33,6 +38,9 @@ final class AppUser: Identifiable {
         self.membershipId = membershipId
         self.phoneNumber = phoneNumber
         self.address = address
+        self.occupation = nil
+        self.bio = nil
+        self.favoriteGenre = nil
         self.createdAt = createdAt
         self.profileImageData = profileImageData
     }
@@ -60,6 +68,7 @@ final class Book: Identifiable {
     var rating: Double
     var coverUrl: String?
     var pdfUrl: String?
+    var isbn: String?
     var shelfCode: String
     var branch: String
     var totalCopies: Int
@@ -69,7 +78,7 @@ final class Book: Identifiable {
     @Relationship(deleteRule: .cascade) var loans: [Loan] = []
     @Relationship(deleteRule: .cascade) var reservations: [Reservation] = []
 
-    init(id: UUID = UUID(), title: String, author: String, genre: String, summary: String = "", status: BookStatus = .available, rating: Double = 0, coverUrl: String? = nil, pdfUrl: String? = nil, shelfCode: String = "", branch: String = "Main Branch", totalCopies: Int = 1, createdAt: Date = .now) {
+    init(id: UUID = UUID(), title: String, author: String, genre: String, summary: String = "", status: BookStatus = .available, rating: Double = 0, coverUrl: String? = nil, pdfUrl: String? = nil, isbn: String? = nil, shelfCode: String = "", branch: String = "Main Branch", totalCopies: Int = 1, createdAt: Date = .now) {
         self.id = id
         self.title = title
         self.author = author
@@ -79,6 +88,7 @@ final class Book: Identifiable {
         self.rating = rating
         self.coverUrl = coverUrl
         self.pdfUrl = pdfUrl
+        self.isbn = isbn
         self.shelfCode = shelfCode
         self.branch = branch
         self.totalCopies = totalCopies

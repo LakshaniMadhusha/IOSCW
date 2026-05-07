@@ -242,6 +242,35 @@ struct ProfileView: View {
             }
             .frame(height: 200)
             .shadow(color: .purple.opacity(0.3), radius: 15, x: 0, y: 10)
+            
+            // New Bio Section
+            if let bio = user.bio, !bio.isEmpty {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("ABOUT ME")
+                        .font(.caption.weight(.black))
+                        .foregroundColor(.textSecondary)
+                    Text(bio)
+                        .font(.subheadline)
+                        .foregroundColor(.textPrimary)
+                        .lineLimit(3)
+                    
+                    if let genre = user.favoriteGenre {
+                        HStack {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.red)
+                            Text("Favorite: \(genre)")
+                                .font(.caption.weight(.bold))
+                                .foregroundColor(.textSecondary)
+                        }
+                        .padding(.top, 4)
+                    }
+                }
+                .padding(20)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color.cardBg)
+                .cornerRadius(20)
+                .padding(.top, 12)
+            }
         }
     }
     
@@ -567,6 +596,9 @@ struct EditProfileView: View {
     @State private var membershipId: String = ""
     @State private var phoneNumber: String = ""
     @State private var address: String = ""
+    @State private var occupation: String = ""
+    @State private var bio: String = ""
+    @State private var favoriteGenre: String = ""
     @State private var selectedItem: PhotosPickerItem?
     @State private var errorMessage: String?
     @State private var isSaving = false
@@ -616,6 +648,13 @@ struct EditProfileView: View {
                     TextField("Home Address", text: $address, axis: .vertical)
                         .lineLimit(3...5)
                 }
+                
+                Section("About Me") {
+                    TextField("Occupation", text: $occupation)
+                    TextField("Favorite Genre", text: $favoriteGenre)
+                    TextField("Bio", text: $bio, axis: .vertical)
+                        .lineLimit(3...6)
+                }
             }
             .navigationTitle("Edit Profile")
             .navigationBarTitleDisplayMode(.inline)
@@ -646,6 +685,9 @@ struct EditProfileView: View {
                 membershipId = user.membershipId ?? ""
                 phoneNumber = user.phoneNumber ?? ""
                 address = user.address ?? ""
+                occupation = user.occupation ?? ""
+                bio = user.bio ?? ""
+                favoriteGenre = user.favoriteGenre ?? ""
             }
             .onChange(of: selectedItem) { _, newItem in
                 Task {
@@ -671,6 +713,9 @@ struct EditProfileView: View {
         user.membershipId = membershipId
         user.phoneNumber = phoneNumber
         user.address = address
+        user.occupation = occupation
+        user.bio = bio
+        user.favoriteGenre = favoriteGenre
         
         do {
             try modelContext.save()

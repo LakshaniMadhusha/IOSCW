@@ -58,7 +58,7 @@ enum MockData {
         ]
 
         let hallA = Hall(
-            name: "Reading Room A",
+            name: "Public Library",
             address: "123 Library Lane",
             floor: 1,
             latitude: 37.3317,
@@ -81,7 +81,7 @@ enum MockData {
         hallA.events = [event1, event2]
 
         let hallB = Hall(
-            name: "Study Hall B",
+            name: "National Library",
             address: "48 Book Street",
             floor: 2,
             latitude: 37.3328,

@@ -2,10 +2,10 @@ import SwiftUI
 
 struct BookCoverCard: View {
     let book: Book
-    let width: CGFloat
-    let height: CGFloat
+    let width: CGFloat?
+    let height: CGFloat?
     
-    init(book: Book, width: CGFloat = 120, height: CGFloat = 180) {
+    init(book: Book, width: CGFloat? = 120, height: CGFloat? = 180) {
         self.book = book
         self.width = width
         self.height = height

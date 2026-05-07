@@ -133,7 +133,7 @@ struct GenreCarousel: View {
                     }
                     Spacer()
                     
-                    Button(action: {}) {
+                    NavigationLink(destination: BookExplorerView(title: title, books: books, user: user)) {
                         HStack(spacing: 4) {
                             Text("See All")
                                 .font(.subheadline.weight(.semibold))

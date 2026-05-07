@@ -22,6 +22,8 @@ struct ReadingTrackerView: View {
     // Integrated Reader Features
     @State private var isReadingMode = false
     @State private var targetReached = false
+    @State private var showingQuiz = false
+    @State private var isBookFinished = false
     
     // New Challenge Feature
     @State private var isChallengeMode = false
@@ -102,15 +104,15 @@ struct ReadingTrackerView: View {
                                     HStack {
                                         VStack(alignment: .leading, spacing: 4) {
                                             Text("Home Courier Challenge")
-                                                .font(.headline)
+                                                .font(.system(size: 18, weight: .bold, design: .rounded))
                                                 .foregroundColor(.white)
                                             Text("Read for \(challengeDuration) mins to unlock Home Borrowing")
-                                                .font(.caption)
+                                                .font(.system(size: 13, weight: .medium))
                                                 .foregroundColor(.white.opacity(0.8))
                                         }
                                         Spacer()
                                         Toggle("", isOn: $isChallengeMode)
-                                            .tint(.white)
+                                            .tint(Color.accent)
                                             .labelsHidden()
                                             .onChange(of: isChallengeMode) { _, newValue in
                                                 if newValue {
@@ -122,9 +124,10 @@ struct ReadingTrackerView: View {
                                     
                                     if isChallengeMode {
                                         HStack {
-                                            Image(systemName: "clock.badge.checkmark.fill")
-                                            Text("Live Activity will track your progress on Lock Screen")
-                                                .font(.caption2.weight(.bold))
+                                            Image(systemName: "checkmark.seal.fill")
+                                                .foregroundColor(.green)
+                                            Text("Live Activity enabled on Lock Screen")
+                                                .font(.system(size: 12, weight: .bold))
                                         }
                                         .foregroundColor(.white)
                                         .padding(.top, 4)
@@ -132,9 +135,9 @@ struct ReadingTrackerView: View {
                                 }
                                 .padding(20)
                                 .background(
-                                    LinearGradient(colors: [.indigo, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    LinearGradient(colors: [Color.indigo, Color.purple], startPoint: .topLeading, endPoint: .bottomTrailing)
                                 )
-                                .cornerRadius(20)
+                                .cornerRadius(24)
                                 .padding(.horizontal, 20)
                                 .opacity(isManualMode ? 0.5 : 1.0)
                                 .disabled(isManualMode)
@@ -322,6 +325,11 @@ struct ReadingTrackerView: View {
                     successOverlay
                 }
             }
+            .sheet(isPresented: $showingQuiz) {
+                if let book = selectedBook {
+                    ReadingVerificationQuizView(book: book, user: user)
+                }
+            }
             .overlay(alignment: .bottomTrailing) {
                 // Reader Toggle Button
                 if !isManualMode && selectedBook != nil {
@@ -478,116 +486,181 @@ struct ReadingTrackerView: View {
     
     private var successOverlay: some View {
         ZStack {
-            Color.black.opacity(0.4).ignoresSafeArea()
+            Color.black.opacity(0.1).ignoresSafeArea()
             Color.clear.background(.ultraThinMaterial).ignoresSafeArea()
             
-            VStack(spacing: 24) {
+            VStack(spacing: 32) {
                 if challengeWon {
-                    ZStack {
-                        Circle()
-                            .fill(LinearGradient(colors: [.yellow, .orange], startPoint: .top, endPoint: .bottom))
-                            .frame(width: 100, height: 100)
-                        Image(systemName: "house.fill")
-                            .font(.system(size: 44))
-                            .foregroundColor(.white)
-                    }
-                    .transition(.scale)
-                    
-                    VStack(spacing: 8) {
-                        Text("CHALLENGE PASSED!")
-                            .font(.title.weight(.black))
-                            .foregroundColor(.primary)
+                    // Elite Challenge Success View
+                    VStack(spacing: 24) {
+                        ZStack {
+                            Circle()
+                                .fill(LinearGradient(colors: [.yellow, .orange], startPoint: .top, endPoint: .bottom))
+                                .frame(width: 120, height: 120)
+                                .shadow(color: .orange.opacity(0.3), radius: 20, x: 0, y: 10)
+                            
+                            Image(systemName: "house.fill")
+                                .font(.system(size: 50, weight: .bold))
+                                .foregroundColor(.white)
+                        }
+                        .scaleEffect(showSuccess ? 1 : 0.5)
+                        .opacity(showSuccess ? 1 : 0)
                         
-                        Text("Eligible for Home Delivery")
-                            .font(.headline)
-                            .foregroundColor(.green)
+                        VStack(spacing: 8) {
+                            Text("CHALLENGE PASSED")
+                                .font(.system(size: 28, weight: .black, design: .rounded))
+                                .foregroundColor(.textPrimary)
+                            
+                            Text("HOME DELIVERY UNLOCKED")
+                                .font(.system(size: 14, weight: .bold))
+                                .foregroundColor(.green)
+                                .tracking(1)
+                        }
                         
                         Text("Your book \"\(selectedBook?.title ?? "this book")\" is now scheduled for home dispatch!")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+                            .font(.system(size: 15, weight: .medium))
+                            .foregroundColor(.textSecondary)
                             .multilineTextAlignment(.center)
-                            .padding(.horizontal)
+                            .padding(.horizontal, 20)
                         
-                        // Courier Bell
-                        Button {
-                            let impact = UIImpactFeedbackGenerator(style: .heavy)
-                            impact.impactOccurred()
-                            withAnimation(.interpolatingSpring(stiffness: 300, damping: 10)) {
-                                bellAnimation = true
-                                bellRung = true
+                        // Courier Interaction Hub
+                        HStack(spacing: 16) {
+                            Button {
+                                triggerHaptic(.heavy)
+                                withAnimation(.interpolatingSpring(stiffness: 300, damping: 10)) {
+                                    bellAnimation = true
+                                    bellRung = true
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                    bellAnimation = false
+                                }
+                            } label: {
+                                VStack(spacing: 8) {
+                                    Image(systemName: bellRung ? "bell.fill" : "bell")
+                                        .font(.title2)
+                                        .scaleEffect(bellAnimation ? 1.4 : 1.0)
+                                    Text(bellRung ? "Notified" : "Notify")
+                                        .font(.caption.weight(.bold))
+                                }
+                                .frame(width: 90, height: 80)
+                                .background(bellRung ? Color.green : Color.orange)
+                                .foregroundColor(.white)
+                                .cornerRadius(20)
                             }
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                bellAnimation = false
+                            
+                            Button {
+                                if let book = selectedBook {
+                                    let pts = max(1, Int(timeElapsed) / 60 / 10) + 50
+                                    courierPassURL = PDFService.shared.generateCourierReceipt(user: user, book: book, points: pts)
+                                }
+                            } label: {
+                                VStack(spacing: 8) {
+                                    Image(systemName: "doc.text.fill")
+                                        .font(.title2)
+                                    Text("Pass")
+                                        .font(.caption.weight(.bold))
+                                }
+                                .frame(width: 90, height: 80)
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(20)
                             }
-                        } label: {
-                            VStack(spacing: 8) {
-                                Image(systemName: bellRung ? "bell.fill" : "bell")
-                                    .font(.system(size: 40))
-                                    .foregroundColor(.white)
-                                    .scaleEffect(bellAnimation ? 1.4 : 1.0)
-                                    .rotationEffect(.degrees(bellAnimation ? 15 : 0))
-                                
-                                Text(bellRung ? "Courier Notified!" : "Ring for Courier")
-                                    .font(.caption.weight(.bold))
-                                    .foregroundColor(.white)
-                            }
-                            .padding()
-                            .frame(width: 140, height: 100)
-                            .background(bellRung ? Color.green : Color.orange)
-                            .cornerRadius(20)
-                            .shadow(color: (bellRung ? Color.green : Color.orange).opacity(0.3), radius: 10, x: 0, y: 5)
                         }
-                        .padding(.top, 8)
-                        
-                        Button {
-                            if let book = selectedBook {
-                                let pts = max(1, Int(timeElapsed) / 60 / 10) + 50
-                                courierPassURL = PDFService.shared.generateCourierReceipt(user: user, book: book, points: pts)
-                            }
-                        } label: {
-                            HStack {
-                                Image(systemName: "doc.text.fill")
-                                Text("Download Official Pass (PDF)")
-                            }
-                            .font(.headline)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.accent)
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
-                        }
-                        .padding(.top, 12)
                     }
                 } else {
-                    Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 80))
-                        .foregroundColor(.green)
+                    // Premium Standard Session Success
+                    VStack(spacing: 28) {
+                        ZStack {
+                            Circle()
+                                .fill(Color.green.opacity(0.1))
+                                .frame(width: 140, height: 140)
+                            
+                            Circle()
+                                .stroke(Color.green.opacity(0.2), lineWidth: 1)
+                                .frame(width: 160, height: 160)
+                            
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.system(size: 90))
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.white, .green)
+                                .shadow(color: .green.opacity(0.3), radius: 15, x: 0, y: 8)
+                        }
+                        .scaleEffect(showSuccess ? 1 : 0.8)
+                        .opacity(showSuccess ? 1 : 0)
+                        
+                        VStack(spacing: 12) {
+                            Text("Session Saved!")
+                                .font(.system(size: 32, weight: .bold, design: .rounded))
+                                .foregroundColor(.textPrimary)
+                            
+                            HStack(spacing: 6) {
+                                Image(systemName: "sparkles")
+                                    .foregroundColor(.orange)
+                                Text("+\(max(1, Int(timeElapsed) / 60 / 10) + (challengeWon ? 50 : 0)) Points Gained")
+                                    .font(.system(size: 18, weight: .bold, design: .rounded))
+                                    .foregroundColor(.textSecondary)
+                            }
+                        }
+                    }
+                }
+                
+                // Action Stack
+                VStack(spacing: 16) {
+                    if !isBookFinished && selectedBook != nil {
+                        Button {
+                            triggerHaptic(.medium)
+                            isBookFinished = true
+                            showingQuiz = true
+                        } label: {
+                            HStack {
+                                Image(systemName: "brain.head.profile")
+                                    .font(.headline)
+                                Text("Verify with Quiz")
+                                    .font(.system(size: 17, weight: .bold, design: .rounded))
+                            }
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 18)
+                            .background(
+                                LinearGradient(colors: [.purple, .indigo], startPoint: .leading, endPoint: .trailing)
+                            )
+                            .cornerRadius(20)
+                            .shadow(color: .purple.opacity(0.3), radius: 10, x: 0, y: 5)
+                        }
+                    }
                     
-                    Text("Session Saved!")
-                        .font(.title2.weight(.bold))
+                    Button {
+                        triggerHaptic(.light)
+                        dismiss()
+                    } label: {
+                        Text("Done")
+                            .font(.system(size: 17, weight: .bold, design: .rounded))
+                            .foregroundColor(.textPrimary)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 18)
+                            .background(Color.cardBg)
+                            .cornerRadius(20)
+                            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.divider, lineWidth: 1))
+                    }
                 }
-                
-                Text("+\(max(1, Int(timeElapsed) / 60 / 10) + (challengeWon ? 50 : 0)) Points Earned")
-                    .font(.headline)
-                    .foregroundColor(.secondary)
-                
-                Button {
-                    dismiss()
-                } label: {
-                    Text("Done")
-                        .font(.headline)
-                        .foregroundColor(.purple)
-                        .padding(.vertical, 8)
-                }
+                .padding(.horizontal, 24)
             }
-            .padding(40)
-            .background(Color.cardBg)
-            .cornerRadius(32)
-            .shadow(radius: 20)
+            .padding(32)
+            .background(
+                RoundedRectangle(cornerRadius: 40)
+                    .fill(Color.cardBg)
+                    .shadow(color: .black.opacity(0.15), radius: 30, x: 0, y: 20)
+            )
             .padding(24)
             .sheet(item: $courierPassURL) { url in
                 ActivityView(activityItems: [url])
             }
         }
+    }
+    
+    private func triggerHaptic(_ style: UIImpactFeedbackGenerator.FeedbackStyle) {
+        let generator = UIImpactFeedbackGenerator(style: style)
+        generator.prepare()
+        generator.impactOccurred()
     }
 }

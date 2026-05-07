@@ -37,87 +37,109 @@ struct HallBookingView: View {
     private let qrFilter = CIFilter.qrCodeGenerator()
 
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(spacing: 20) {
-                Text("Hall Booking")
-                    .font(.largeTitle.weight(.bold))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal, 20)
-
-                Picker("Booking Type", selection: $selectedTab) {
-                    ForEach(HallBookingTab.allCases, id: \.self) { tab in
-                        Text(tab.rawValue).tag(tab)
+        ZStack {
+            // Ambient Background
+            LinearGradient(colors: [Color.pageBg, Color.purple.opacity(0.05), Color.pageBg], startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea()
+            
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 28) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Hall Booking")
+                            .font(.system(size: 34, weight: .bold, design: .rounded))
+                            .foregroundColor(.textPrimary)
+                        Text("Reserve space for your reading events")
+                            .font(.subheadline)
+                            .foregroundColor(.textSecondary)
                     }
-                }
-                .pickerStyle(.segmented)
-                .padding(.horizontal, 20)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 10)
 
-                Map(coordinateRegion: $region, annotationItems: halls) { hall in
-                    MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: hall.latitude, longitude: hall.longitude)) {
-                        VStack(spacing: 4) {
-                            Image(systemName: selectedHall?.id == hall.id ? "mappin.circle.fill" : "mappin.circle")
-                                .font(.title2)
-                                .foregroundColor(selectedHall?.id == hall.id ? .purpleAccent : .red)
-                                .shadow(radius: 2)
-                                .onTapGesture {
-                                    selectHall(hall)
-                                }
-                            Text(hall.name)
-                                .font(.caption)
-                                .foregroundColor(.textPrimary)
-                                .fixedSize()
+                    Picker("Booking Type", selection: $selectedTab) {
+                        ForEach(HallBookingTab.allCases, id: \.self) { tab in
+                            Text(tab.rawValue).tag(tab)
                         }
                     }
-                }
-                .frame(height: 230)
-                .cornerRadius(20)
-                .padding(.horizontal, 20)
+                    .pickerStyle(.segmented)
+                    .padding(.horizontal, 24)
 
-                VStack(spacing: 16) {
-                    if let selectedHall {
-                        HallSummaryView(hall: selectedHall)
-                    } else {
-                        Text("Choose a library from the map or list below to start booking.")
-                            .foregroundColor(.textSecondary)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.cardBg)
-                            .cornerRadius(18)
-                            .padding(.horizontal, 20)
-                    }
-
-                    if selectedTab == .event {
-                        EventBookingSection(
-                            selectedHall: selectedHall,
-                            selectedEvent: $selectedEvent,
-                            bookingDate: $bookingDate,
-                            attendeeCount: $attendeeCount,
-                            actionTitle: "Reserve Event Spot",
-                            onConfirm: createEventReservation
+                    ZStack {
+                        Map(coordinateRegion: $region, annotationItems: halls) { hall in
+                            MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: hall.latitude, longitude: hall.longitude)) {
+                                VStack(spacing: 4) {
+                                    Image(systemName: selectedHall?.id == hall.id ? "mappin.circle.fill" : "mappin.circle")
+                                        .font(.title2)
+                                        .foregroundColor(selectedHall?.id == hall.id ? .purpleAccent : .red)
+                                        .shadow(radius: 2)
+                                        .onTapGesture {
+                                            selectHall(hall)
+                                        }
+                                    Text(hall.name)
+                                        .font(.system(size: 10, weight: .bold, design: .rounded))
+                                        .foregroundColor(.textPrimary)
+                                        .padding(.horizontal, 6)
+                                        .padding(.vertical, 2)
+                                        .background(.ultraThinMaterial)
+                                        .cornerRadius(4)
+                                }
+                            }
+                        }
+                        .frame(height: 250)
+                        .cornerRadius(24)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 24)
+                                .stroke(Color.white.opacity(0.1), lineWidth: 1)
                         )
-                        .padding(.horizontal, 20)
-                    } else {
-                        SeatBookingSection(
-                            selectedHall: selectedHall,
-                            selectedSeat: $selectedSeat,
-                            bookingDate: $bookingDate,
-                            bookingHours: $bookingHours,
-                            attendeeCount: $attendeeCount,
-                            actionTitle: "Reserve Seat",
-                            onConfirm: createSeatReservation
-                        )
-                        .padding(.horizontal, 20)
+                        .shadow(color: .black.opacity(0.1), radius: 20, x: 0, y: 10)
                     }
+                    .padding(.horizontal, 24)
 
-                    HallListView(halls: halls, selectedHall: $selectedHall)
-                        .padding(.horizontal, 20)
+                    VStack(spacing: 20) {
+                        if let selectedHall {
+                            HallSummaryView(hall: selectedHall)
+                        } else {
+                            Text("Choose a library from the map or list below to start booking.")
+                                .font(.subheadline)
+                                .foregroundColor(.textSecondary)
+                                .padding(24)
+                                .frame(maxWidth: .infinity)
+                                .background(.ultraThinMaterial)
+                                .cornerRadius(22)
+                                .padding(.horizontal, 24)
+                        }
+
+                        if selectedTab == .event {
+                            EventBookingSection(
+                                selectedHall: selectedHall,
+                                selectedEvent: $selectedEvent,
+                                bookingDate: $bookingDate,
+                                attendeeCount: $attendeeCount,
+                                actionTitle: "Reserve Event Spot",
+                                onConfirm: createEventReservation
+                            )
+                            .padding(.horizontal, 24)
+                        } else {
+                            SeatBookingSection(
+                                selectedHall: selectedHall,
+                                selectedSeat: $selectedSeat,
+                                bookingDate: $bookingDate,
+                                bookingHours: $bookingHours,
+                                attendeeCount: $attendeeCount,
+                                actionTitle: "Reserve Seat",
+                                onConfirm: createSeatReservation
+                            )
+                            .padding(.horizontal, 24)
+                        }
+
+                        HallListView(halls: halls, selectedHall: $selectedHall)
+                            .padding(.horizontal, 24)
+                    }
+                    .padding(.bottom, 40)
                 }
-                .padding(.bottom, 24)
             }
         }
-        .background(Color.pageBg.ignoresSafeArea())
-        .navigationTitle("Hall Booking")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
         .onChange(of: halls) { _, newHalls in
             if selectedHall == nil, let first = newHalls.first {
                 selectHall(first)
@@ -245,6 +267,8 @@ struct HallBookingView: View {
 
         do {
             try modelContext.save()
+            // Sync to Firebase Cloud
+            FirebaseSyncService.shared.saveReservationToCloud(reservation)
         } catch {
             print("Failed to save hall reservation: \(error)")
         }
@@ -455,7 +479,7 @@ private struct QRCodeSheetView: View {
                 .foregroundColor(.purpleAccent)
             
             if let image {
-                Image(uiImage: image)
+                Image("CustomQR")
                     .interpolation(.none)
                     .resizable()
                     .scaledToFit()
