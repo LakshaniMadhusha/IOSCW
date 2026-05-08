@@ -29,6 +29,7 @@ struct AddBookView: View {
     @State private var isSuccess = false
     
     @State private var isShowingScanner = false
+    @State private var showingBarcodeDisplay = false
     @State private var scannedText = ""
     @State private var scanningField: ScanField? = nil
     
@@ -169,8 +170,7 @@ struct AddBookView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack(spacing: 16) {
                         Button {
-                            scanningField = .isbn
-                            isShowingScanner = true
+                            showingBarcodeDisplay = true
                         } label: {
                             Image(systemName: "barcode.viewfinder")
                         }
@@ -217,6 +217,12 @@ struct AddBookView: View {
             .sheet(isPresented: $isShowingScanner) {
                 DataScannerView(recognizedText: $scannedText)
                     .ignoresSafeArea()
+            }
+            .sheet(isPresented: $showingBarcodeDisplay) {
+                BarcodeDisplayView(isbn: isbn) {
+                    scanningField = .isbn
+                    isShowingScanner = true
+                }
             }
         }
     }
